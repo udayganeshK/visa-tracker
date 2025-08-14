@@ -264,7 +264,7 @@ def send_confirmation_email(email, subscription_details):
                     <li><strong>Smart Alerts:</strong> You'll get notifications only for appointments updated within your selected time threshold</li>
                     <li><strong>Personalized:</strong> Only visa types and locations you selected will trigger alerts</li>
                     <li><strong>Real-time:</strong> Get notified as soon as fresh appointments are detected</li>
-                </ul>
+                </ul
                 
                 <div style="background-color: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 5px; margin: 15px 0;">
                     <strong>🔔 Next Steps:</strong>
@@ -940,6 +940,37 @@ def my_subscription(email):
         
     except Exception as e:
         return jsonify({"error": f"Failed to get subscription: {str(e)}"}), 500
+
+@app.route('/health')
+def health_check():
+    """Health check endpoint for load balancers and monitoring"""
+    try:
+        # Check if essential files exist
+        files_status = {
+            'subscriptions': os.path.exists(SUBSCRIPTIONS_FILE),
+            'stats': os.path.exists(STATS_FILE),
+            'email_log': os.path.exists(EMAIL_LOG_FILE)
+        }
+        
+        # Check if we can load data
+        subscriptions = load_subscriptions()
+        stats = load_stats()
+        
+        return jsonify({
+            "status": "healthy",
+            "timestamp": datetime.now().isoformat(),
+            "files": files_status,
+            "subscriptions_count": len(subscriptions),
+            "uptime": stats.get('last_startup', 'unknown'),
+            "version": "1.0.0"
+        }), 200
+        
+    except Exception as e:
+        return jsonify({
+            "status": "unhealthy",
+            "error": str(e),
+            "timestamp": datetime.now().isoformat()
+        }), 503
 
 if __name__ == '__main__':
     print("🚀 Starting Visa Tracker Web Application")
