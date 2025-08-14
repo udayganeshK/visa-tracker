@@ -584,8 +584,8 @@ def index():
                                 'relative_minutes': relative_minutes
                             })
                     
-                    # Sort by freshness (newest first)
-                    preview_data.sort(key=lambda x: x['relative_minutes'])
+                    # Sort by visa type first, then by location, then by freshness
+                    preview_data.sort(key=lambda x: (x['visa_type'], x['location'], x['relative_minutes']))
                     
                     # Get the actual timestamp from the data file
                     last_updated_timestamp = data.get('createdon', get_ist_now().timestamp() * 1000)

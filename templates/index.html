@@ -1151,6 +1151,8 @@
             const searchTerm = document.getElementById('searchFilter').value.toLowerCase();
             const subcategoryFilter = document.getElementById('subcategoryFilter').value;
             const freshnessFilter = document.getElementById('freshnessFilter').value;
+            const locationFilter = document.getElementById('locationFilter');
+            const selectedLocations = Array.from(locationFilter.selectedOptions).map(option => option.value.toLowerCase());
             const table = document.getElementById('visaDataTable');
             const rows = table.getElementsByTagName('tr');
             let visibleCount = 0;
@@ -1172,6 +1174,16 @@
                 // Subcategory filter
                 if (subcategoryFilter) {
                     if (!visaType.includes(subcategoryFilter.toLowerCase())) {
+                        showRow = false;
+                    }
+                }
+
+                // Location filter
+                if (selectedLocations.length > 0) {
+                    const matchesLocation = selectedLocations.some(selectedLocation => 
+                        location.includes(selectedLocation) || selectedLocation.includes(location.replace(' vac', '').replace(' ', ''))
+                    );
+                    if (!matchesLocation) {
                         showRow = false;
                     }
                 }
@@ -1212,6 +1224,33 @@
             if (countElement) {
                 countElement.textContent = visibleCount;
             }
+
+            // Update selected locations display
+            updateSelectedLocationsDisplay();
+        }
+
+        // Update selected locations display
+        function updateSelectedLocationsDisplay() {
+            const locationFilter = document.getElementById('locationFilter');
+            const selectedLocations = Array.from(locationFilter.selectedOptions).map(option => option.text);
+            const selectedLocationsRow = document.getElementById('selectedLocationsRow');
+            const selectedLocationsBadges = document.getElementById('selectedLocationsBadges');
+            
+            if (selectedLocations.length > 0) {
+                selectedLocationsBadges.innerHTML = selectedLocations.map(location => 
+                    `<span class="badge bg-primary me-1">${location}</span>`
+                ).join('');
+                selectedLocationsRow.style.display = 'block';
+            } else {
+                selectedLocationsRow.style.display = 'none';
+            }
+        }
+
+        // Clear location filter
+        function clearLocationFilter() {
+            const locationFilter = document.getElementById('locationFilter');
+            locationFilter.selectedIndex = -1; // Clear all selections
+            filterData();
         }
 
         // Quick filter functions for table
@@ -1242,6 +1281,8 @@
             document.getElementById('searchFilter').value = '';
             document.getElementById('subcategoryFilter').value = '';
             document.getElementById('freshnessFilter').value = '';
+            const locationFilter = document.getElementById('locationFilter');
+            locationFilter.selectedIndex = -1; // Clear all location selections
             filterData();
         }
 
