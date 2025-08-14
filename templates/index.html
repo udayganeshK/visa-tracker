@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>US Visa Slot Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            padding-top: 2rem;
+            padding-bottom: 2rem;
+        }
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
+            background: rgba(255,255,255,0.95);
+        }
+        .card-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px 15px 0 0 !important;
+            padding: 1.5rem;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 25px;
+            padding: 0.75rem 2rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        .form-check-input:checked {
+            background-color: #667eea;
+            border-color: #667eea;
+        }
+        .badge {
+            font-size: 0.8rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+        }
+        .status-card {
+            background: rgba(255,255,255,0.9);
+            border-radius: 10px;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #667eea;
+        }
+        .notification-info {
+            background: linear-gradient(135deg, #e3f2fd 0%, #f3e5f5 100%);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            border-left: 4px solid #2196f3;
+        }
+        .visa-category {
+            background: rgba(248, 249, 250, 0.8);
+            border-radius: 8px;
+            padding: 1rem;
+            border-left: 3px solid #dee2e6;
+        }
+        .visa-category h6 {
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+        .form-check-label strong {
+            color: #495057;
+        }
+        .form-check-label .text-muted {
+            font-size: 0.85rem;
+        }
+        .visa-item {
+            cursor: pointer;
+            transition: all 0.2s ease;
+            padding: 0.5rem;
+            border-radius: 5px;
+        }
+        .visa-item:hover {
+            background-color: rgba(102, 126, 234, 0.1);
+            transform: translateX(5px);
+        }
+        .visa-item.expanded {
+            background-color: rgba(102, 126, 234, 0.15);
+        }
+        .visa-type-text {
+            color: #495057;
+        }
+        .expand-icon {
+            transition: transform 0.2s ease;
+        }
+        .visa-item.expanded .expand-icon {
+            transform: rotate(180deg);
+        }
+        .btn-group .btn {
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1 class="text-white mb-3">
+                    <i class="fas fa-passport me-3"></i>US Visa Slot Tracker
+                </h1>
+                <p class="text-white-50 lead">Get instant notifications for fresh visa appointments</p>
+            </div>
+        </div>
+
+        <!-- Notification Info -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="notification-info">
+                    <h5><i class="fas fa-info-circle me-2"></i>How it works:</h5>
+                    <ul class="mb-0">
+                        <li><strong>Automated Monitoring:</strong> System checks for new visa slots every 10 minutes</li>
+                        <li><strong>Fresh Alerts:</strong> You get email notifications for appointments updated within the last 15 minutes</li>
+                        <li><strong>Personalized:</strong> Only receive alerts for your selected visa types and locations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Status Cards -->
+        <div class="row mb-4">
+            <div class="col-md-3">
+                <div class="status-card text-center">
+                    <h5><i class="fas fa-clock text-primary me-2"></i>Every 10 Minutes</h5>
+                    <p class="mb-0 text-muted">Automated checks for new slots</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="status-card text-center">
+                    <h5><i class="fas fa-bell text-success me-2"></i>User Defined</h5>
+                    <p class="mb-0 text-muted">Alert threshold (customizable)</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="status-card text-center">
+                    <h5><i class="fas fa-database text-info me-2"></i>Live Data</h5>
+                    <p class="mb-0 text-muted">Real-time visa slot information</p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="status-card text-center">
+                    <h5><i class="fas fa-sync-alt text-warning me-2"></i><span id="lastUpdateTime">Loading...</span></h5>
+                    <p class="mb-0 text-muted">Last data refresh</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Real-time System Status -->
+        <div class="row mb-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0"><i class="fas fa-heartbeat me-2"></i>System Status</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <div class="text-success">
+                                        <i class="fas fa-circle fa-sm me-1"></i>
+                                        <strong>Online</strong>
+                                    </div>
+                                    <small class="text-muted">System Status</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <div id="nextCheckCountdown">
+                                        <i class="fas fa-clock me-1"></i>
+                                        <strong>Calculating...</strong>
+                                    </div>
+                                    <small class="text-muted">Next Check In</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <div>
+                                        <i class="fas fa-users me-1"></i>
+                                        <strong>{{ subscription_count if subscription_count else 0 }}</strong>
+                                    </div>
+                                    <small class="text-muted">Active Subscriptions</small>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="text-center">
+                                    <div>
+                                        <i class="fas fa-envelope me-1"></i>
+                                        <strong id="emailsSent">{{ last_check_info.alerts_sent if last_check_info and last_check_info.alerts_sent else 0 }}</strong>
+                                    </div>
+                                    <small class="text-muted">Last Check Alerts</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Flash Messages -->
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>{{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+
+        <!-- Main Content -->
+        <div class="row">
+            <!-- Subscription Form -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h4 class="mb-0"><i class="fas fa-user-plus me-2"></i>Subscribe to Notifications</h4>
+                    </div>
+                    <div class="card-body">
+                        <form method="POST" action="/subscribe">
+                            <!-- Email Input -->
+                            <div class="mb-4">
+                                <label for="email" class="form-label fw-bold">
+                                    <i class="fas fa-envelope me-2"></i>Email Address
+                                </label>
+                                <input type="email" class="form-control" id="email" name="email" 
+                                       placeholder="your-email@example.com" required>
+                                <div class="form-text">We'll send you alerts for fresh visa appointments</div>
+                            </div>
+
+                            <!-- Visa Types -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">
+                                    <i class="fas fa-passport me-2"></i>Visa Types & Subcategories
+                                </label>
+                                <div class="form-text mb-3">Select specific visa types and appointment categories</div>
+                                
+                                <!-- Business/Tourism Visas -->
+                                <div class="visa-category mb-3">
+                                    <h6 class="text-primary mb-2"><i class="fas fa-briefcase me-2"></i>Business & Tourism</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="B1 (Regular)" id="visa_B1_Regular">
+                                                <label class="form-check-label" for="visa_B1_Regular">
+                                                    <strong>B1 Regular</strong> <span class="text-muted">- Business</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="B1 (Dropbox)" id="visa_B1_Dropbox">
+                                                <label class="form-check-label" for="visa_B1_Dropbox">
+                                                    <strong>B1 Dropbox</strong> <span class="text-muted">- Business Renewal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="B2 (Regular)" id="visa_B2_Regular">
+                                                <label class="form-check-label" for="visa_B2_Regular">
+                                                    <strong>B2 Regular</strong> <span class="text-muted">- Tourism</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="B2 (Dropbox)" id="visa_B2_Dropbox">
+                                                <label class="form-check-label" for="visa_B2_Dropbox">
+                                                    <strong>B2 Dropbox</strong> <span class="text-muted">- Tourism Renewal</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="B1/B2 (Regular)" id="visa_B1B2_Regular">
+                                                <label class="form-check-label" for="visa_B1B2_Regular">
+                                                    <strong>B1/B2 Regular</strong> <span class="text-muted">- Business/Tourism</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="B1/B2 (Dropbox)" id="visa_B1B2_Dropbox">
+                                                <label class="form-check-label" for="visa_B1B2_Dropbox">
+                                                    <strong>B1/B2 Dropbox</strong> <span class="text-muted">- Business/Tourism Renewal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="B1/B2 (Emergency)" id="visa_B1B2_Emergency">
+                                                <label class="form-check-label" for="visa_B1B2_Emergency">
+                                                    <strong>B1/B2 Emergency</strong> <span class="text-muted">- Urgent Business/Tourism</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Work Visas -->
+                                <div class="visa-category mb-3">
+                                    <h6 class="text-warning mb-2"><i class="fas fa-hard-hat me-2"></i>Work Visas</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="H-1B (Regular)" id="visa_H1B_Regular">
+                                                <label class="form-check-label" for="visa_H1B_Regular">
+                                                    <strong>H-1B Regular</strong> <span class="text-muted">- Specialty Work</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="H-1B (Dropbox)" id="visa_H1B_Dropbox">
+                                                <label class="form-check-label" for="visa_H1B_Dropbox">
+                                                    <strong>H-1B Dropbox</strong> <span class="text-muted">- Work Renewal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="H-1B (Emergency)" id="visa_H1B_Emergency">
+                                                <label class="form-check-label" for="visa_H1B_Emergency">
+                                                    <strong>H-1B Emergency</strong> <span class="text-muted">- Urgent Work</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="H-4 (Regular)" id="visa_H4_Regular">
+                                                <label class="form-check-label" for="visa_H4_Regular">
+                                                    <strong>H-4 Regular</strong> <span class="text-muted">- H1B Dependent</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="H-4 (Dropbox)" id="visa_H4_Dropbox">
+                                                <label class="form-check-label" for="visa_H4_Dropbox">
+                                                    <strong>H-4 Dropbox</strong> <span class="text-muted">- H1B Dependent Renewal</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="L-1 (Individual) (Regular)" id="visa_L1_Individual_Regular">
+                                                <label class="form-check-label" for="visa_L1_Individual_Regular">
+                                                    <strong>L-1 Individual Regular</strong> <span class="text-muted">- Intracompany Transfer</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="L-1 (Individual) (Dropbox)" id="visa_L1_Individual_Dropbox">
+                                                <label class="form-check-label" for="visa_L1_Individual_Dropbox">
+                                                    <strong>L-1 Individual Dropbox</strong> <span class="text-muted">- Transfer Renewal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="L-1 (Blanket) (Regular)" id="visa_L1_Blanket_Regular">
+                                                <label class="form-check-label" for="visa_L1_Blanket_Regular">
+                                                    <strong>L-1 Blanket Regular</strong> <span class="text-muted">- Blanket Transfer</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="O-1 (Regular)" id="visa_O1_Regular">
+                                                <label class="form-check-label" for="visa_O1_Regular">
+                                                    <strong>O-1 Regular</strong> <span class="text-muted">- Extraordinary Ability</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="O-1 (Dropbox)" id="visa_O1_Dropbox">
+                                                <label class="form-check-label" for="visa_O1_Dropbox">
+                                                    <strong>O-1 Dropbox</strong> <span class="text-muted">- Extraordinary Ability Renewal</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Student & Exchange Visas -->
+                                <div class="visa-category mb-3">
+                                    <h6 class="text-success mb-2"><i class="fas fa-graduation-cap me-2"></i>Student & Exchange</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="F-1 (Regular)" id="visa_F1_Regular">
+                                                <label class="form-check-label" for="visa_F1_Regular">
+                                                    <strong>F-1 Regular</strong> <span class="text-muted">- Student</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="F-1 (Dropbox)" id="visa_F1_Dropbox">
+                                                <label class="form-check-label" for="visa_F1_Dropbox">
+                                                    <strong>F-1 Dropbox</strong> <span class="text-muted">- Student Renewal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="F-2 (Regular)" id="visa_F2_Regular">
+                                                <label class="form-check-label" for="visa_F2_Regular">
+                                                    <strong>F-2 Regular</strong> <span class="text-muted">- Student Dependent</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="F-2 (Dropbox)" id="visa_F2_Dropbox">
+                                                <label class="form-check-label" for="visa_F2_Dropbox">
+                                                    <strong>F-2 Dropbox</strong> <span class="text-muted">- Student Dependent Renewal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="M-1 (Regular)" id="visa_M1_Regular">
+                                                <label class="form-check-label" for="visa_M1_Regular">
+                                                    <strong>M-1 Regular</strong> <span class="text-muted">- Vocational Student</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="J-1 (Regular)" id="visa_J1_Regular">
+                                                <label class="form-check-label" for="visa_J1_Regular">
+                                                    <strong>J-1 Regular</strong> <span class="text-muted">- Exchange Visitor</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="J-1 (Dropbox)" id="visa_J1_Dropbox">
+                                                <label class="form-check-label" for="visa_J1_Dropbox">
+                                                    <strong>J-1 Dropbox</strong> <span class="text-muted">- Exchange Renewal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="J-1 Physicians (Regular)" id="visa_J1_Physicians_Regular">
+                                                <label class="form-check-label" for="visa_J1_Physicians_Regular">
+                                                    <strong>J-1 Physicians</strong> <span class="text-muted">- Medical Exchange</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="J-2 (Regular)" id="visa_J2_Regular">
+                                                <label class="form-check-label" for="visa_J2_Regular">
+                                                    <strong>J-2 Regular</strong> <span class="text-muted">- Exchange Dependent</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="J-2 (Dropbox)" id="visa_J2_Dropbox">
+                                                <label class="form-check-label" for="visa_J2_Dropbox">
+                                                    <strong>J-2 Dropbox</strong> <span class="text-muted">- Exchange Dependent Renewal</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Family & Immigration -->
+                                <div class="visa-category mb-3">
+                                    <h6 class="text-danger mb-2"><i class="fas fa-heart me-2"></i>Family & Immigration</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="K1 (Regular)" id="visa_K1_Regular">
+                                                <label class="form-check-label" for="visa_K1_Regular">
+                                                    <strong>K1 Regular</strong> <span class="text-muted">- Fiancé</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="CR1 (Regular)" id="visa_CR1_Regular">
+                                                <label class="form-check-label" for="visa_CR1_Regular">
+                                                    <strong>CR1 Regular</strong> <span class="text-muted">- Conditional Resident</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="IR1 (Regular)" id="visa_IR1_Regular">
+                                                <label class="form-check-label" for="visa_IR1_Regular">
+                                                    <strong>IR1 Regular</strong> <span class="text-muted">- Immediate Relative</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="IR5 (Regular)" id="visa_IR5_Regular">
+                                                <label class="form-check-label" for="visa_IR5_Regular">
+                                                    <strong>IR5 Regular</strong> <span class="text-muted">- Parent of US Citizen</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="IR5 (Dropbox)" id="visa_IR5_Dropbox">
+                                                <label class="form-check-label" for="visa_IR5_Dropbox">
+                                                    <strong>IR5 Dropbox</strong> <span class="text-muted">- Parent Renewal</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="IR2 (Regular)" id="visa_IR2_Regular">
+                                                <label class="form-check-label" for="visa_IR2_Regular">
+                                                    <strong>IR2 Regular</strong> <span class="text-muted">- Unmarried Child</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="SB1-Returning Resident (Regular)" id="visa_SB1_Regular">
+                                                <label class="form-check-label" for="visa_SB1_Regular">
+                                                    <strong>SB1 Returning Resident</strong> <span class="text-muted">- Returning Resident</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Other/Special Visas -->
+                                <div class="visa-category mb-3">
+                                    <h6 class="text-info mb-2"><i class="fas fa-globe me-2"></i>Other & Special Visas</h6>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="E2 (Regular)" id="visa_E2_Regular">
+                                                <label class="form-check-label" for="visa_E2_Regular">
+                                                    <strong>E2 Regular</strong> <span class="text-muted">- Investor</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="R-1 (Regular)" id="visa_R1_Regular">
+                                                <label class="form-check-label" for="visa_R1_Regular">
+                                                    <strong>R-1 Regular</strong> <span class="text-muted">- Religious Worker</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="C1/D (Regular)" id="visa_C1D_Regular">
+                                                <label class="form-check-label" for="visa_C1D_Regular">
+                                                    <strong>C1/D Regular</strong> <span class="text-muted">- Transit/Crew</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="C1/D (Dropbox)" id="visa_C1D_Dropbox">
+                                                <label class="form-check-label" for="visa_C1D_Dropbox">
+                                                    <strong>C1/D Dropbox</strong> <span class="text-muted">- Transit/Crew Renewal</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="TD (Regular)" id="visa_TD_Regular">
+                                                <label class="form-check-label" for="visa_TD_Regular">
+                                                    <strong>TD Regular</strong> <span class="text-muted">- NAFTA Dependent</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="U-1 (Regular)" id="visa_U1_Regular">
+                                                <label class="form-check-label" for="visa_U1_Regular">
+                                                    <strong>U-1 Regular</strong> <span class="text-muted">- Crime Victim</span>
+                                                </label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="visa_types" value="Expedited Cases (Regular)" id="visa_Expedited_Regular">
+                                                <label class="form-check-label" for="visa_Expedited_Regular">
+                                                    <strong>Expedited Cases</strong> <span class="text-muted">- Urgent/Emergency</span>
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="alert alert-info mt-3">
+                                    <i class="fas fa-lightbulb me-2"></i>
+                                    <strong>Tip:</strong> 
+                                    <em>Dropbox</em> appointments are for visa renewals (faster process).
+                                    <em>Regular</em> appointments are for new visa applications.
+                                    <em>Emergency/Expedited</em> appointments are for urgent cases.
+                                    <em>Combined types</em> like B1/B2 cover multiple visa categories.
+                                </div>
+                            </div>
+
+                            <!-- Alert Threshold -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">
+                                    <i class="fas fa-clock me-2"></i>Alert Threshold
+                                </label>
+                                <div class="form-text mb-2">Get alerts for appointments updated within this time frame</div>
+                                <select class="form-select" name="alert_threshold" required>
+                                    <option value="1">1 minute</option>
+                                    <option value="5">5 minutes</option>
+                                    <option value="10">10 minutes</option>
+                                    <option value="15" selected>15 minutes (default)</option>
+                                    <option value="30">30 minutes</option>
+                                    <option value="60">1 hour</option>
+                                    <option value="120">2 hours</option>
+                                    <option value="180">3 hours</option>
+                                    <option value="300">5 hours</option>
+                                    <option value="600">10 hours</option>
+                                    <option value="1440">24 hours</option>
+                                </select>
+                                <div class="form-text">
+                                    <i class="fas fa-info-circle me-1"></i>
+                                    Lower thresholds = more frequent alerts for fresh appointments
+                                </div>
+                            </div>
+
+                            <!-- Locations (Optional) -->
+                            <div class="mb-4">
+                                <label class="form-label fw-bold">
+                                    <i class="fas fa-map-marker-alt me-2"></i>Locations (Optional)
+                                </label>
+                                <div class="form-text mb-2">Leave empty to get alerts for all locations</div>
+                                <div class="row">
+                                    {% if visa_data and visa_data.locations %}
+                                        {% for location in visa_data.locations %}
+                                            <div class="col-md-6 mb-2">
+                                                <div class="form-check">
+                                                    <input class="form-check-input" type="checkbox" 
+                                                           name="locations" value="{{ location }}" 
+                                                           id="location_{{ location|replace(' ', '_') }}">
+                                                    <label class="form-check-label" for="location_{{ location|replace(' ', '_') }}">
+                                                        {{ location }}
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    {% else %}
+                                        <div class="col-12">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="locations" value="CHENNAI" id="loc_chennai">
+                                                <label class="form-check-label" for="loc_chennai">Chennai</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="locations" value="MUMBAI" id="loc_mumbai">
+                                                <label class="form-check-label" for="loc_mumbai">Mumbai</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="locations" value="NEW DELHI" id="loc_delhi">
+                                                <label class="form-check-label" for="loc_delhi">New Delhi</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="locations" value="HYDERABAD" id="loc_hyderabad">
+                                                <label class="form-check-label" for="loc_hyderabad">Hyderabad</label>
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fas fa-bell me-2"></i>Subscribe to Alerts
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Current Data Preview -->
+            <div class="col-lg-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        <h4 class="mb-0"><i class="fas fa-chart-line me-2"></i>Current Visa Slots</h4>
+                    </div>
+                    <div class="card-body">
+                        {% if visa_data and visa_data.preview %}
+                            <!-- Search and Filter Section -->
+                            <div class="mb-3">
+                                <div class="row">
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" id="visaSearch" 
+                                               placeholder="Search visa types (e.g., F, H, B1, Dropbox)..." 
+                                               onkeyup="filterVisaData()">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <select class="form-select" id="categoryFilter" onchange="filterVisaData()">
+                                            <option value="">All Categories</option>
+                                            <option value="Regular">Regular</option>
+                                            <option value="Dropbox">Dropbox</option>
+                                            <option value="Emergency">Emergency</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Quick Filter Buttons -->
+                            <div class="mb-3">
+                                <div class="btn-group flex-wrap" role="group">
+                                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="quickFilter('all')">All</button>
+                                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="quickFilter('B')">B1/B2</button>
+                                    <button type="button" class="btn btn-outline-success btn-sm" onclick="quickFilter('F')">F (Student)</button>
+                                    <button type="button" class="btn btn-outline-warning btn-sm" onclick="quickFilter('H')">H (Work)</button>
+                                    <button type="button" class="btn btn-outline-info btn-sm" onclick="quickFilter('J')">J (Exchange)</button>
+                                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="quickFilter('L')">L (Transfer)</button>
+                                    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="quickFilter('Dropbox')">Dropbox</button>
+                                </div>
+                            </div>
+                            
+                            <p class="text-muted mb-3">
+                                <i class="fas fa-clock me-1"></i>
+                                Last updated: {{ visa_data.last_updated }}
+                                <span class="ms-3">
+                                    <i class="fas fa-chart-bar me-1"></i>
+                                    <span id="visibleCount">{{ visa_data.preview|length }}</span> of {{ visa_data.preview|length }} records
+                                </span>
+                            </p>
+
+                            <!-- Visa Data Container -->
+                            <div id="visaDataContainer" style="max-height: 400px; overflow-y: auto;">
+                                {% for item in visa_data.preview %}
+                                    <div class="visa-item border-bottom pb-2 mb-2" 
+                                         data-visa-type="{{ item.visa_type }}" 
+                                         data-location="{{ item.location }}"
+                                         onclick="showVisaDetails(this)">
+                                        <div class="d-flex justify-content-between align-items-start">
+                                            <div class="flex-grow-1">
+                                                <div class="d-flex align-items-center mb-1">
+                                                    <strong class="visa-type-text">{{ item.visa_type }}</strong>
+                                                    {% if 'Dropbox' in item.visa_type %}
+                                                        <span class="badge bg-success ms-2">Dropbox</span>
+                                                    {% elif 'Emergency' in item.visa_type %}
+                                                        <span class="badge bg-danger ms-2">Emergency</span>
+                                                    {% else %}
+                                                        <span class="badge bg-primary ms-2">Regular</span>
+                                                    {% endif %}
+                                                    
+                                                    <!-- Freshness indicator -->
+                                                    {% if item.relative_minutes %}
+                                                        {% if item.relative_minutes <= 15 %}
+                                                            <span class="badge bg-success ms-1">Fresh</span>
+                                                        {% elif item.relative_minutes <= 60 %}
+                                                            <span class="badge bg-warning ms-1">Recent</span>
+                                                        {% else %}
+                                                            <span class="badge bg-secondary ms-1">Old</span>
+                                                        {% endif %}
+                                                    {% endif %}
+                                                </div>
+                                                
+                                                <small class="text-muted d-block">
+                                                    <i class="fas fa-map-marker-alt me-1"></i>{{ item.location }}
+                                                </small>
+                                                
+                                                <!-- Hidden details for expansion -->
+                                                <div class="visa-details" style="display: none;">
+                                                    <div class="mt-2 p-2 bg-light rounded">
+                                                        <div class="row">
+                                                            <div class="col-6">
+                                                                <small><strong>Appointments:</strong> {{ item.appointments }}</small>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <small><strong>Earliest Date:</strong> {{ item.earliest_date }}</small>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row mt-1">
+                                                            <div class="col-6">
+                                                                <small><strong>Last Updated:</strong> {{ item.created_on }}</small>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <small><strong>Freshness:</strong> {{ item.relative_time }}</small>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <!-- Quick Subscribe Button -->
+                                                        <div class="mt-2">
+                                                            <button class="btn btn-outline-primary btn-sm" 
+                                                                    onclick="quickSubscribe('{{ item.visa_type }}', '{{ item.location }}'); event.stopPropagation();">
+                                                                <i class="fas fa-bell me-1"></i>Quick Subscribe
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="text-end">
+                                                <span class="badge bg-info">{{ item.appointments }} slots</span>
+                                                <br>
+                                                <small class="text-muted">{{ item.earliest_date }}</small>
+                                                <br>
+                                                <i class="fas fa-chevron-down text-muted expand-icon" style="font-size: 0.8rem;"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endfor %}
+                            </div>
+
+                            <!-- No Results Message -->
+                            <div id="noResults" style="display: none;" class="text-center text-muted py-4">
+                                <i class="fas fa-search fa-2x mb-2"></i>
+                                <p>No visa slots match your search criteria</p>
+                                <small>Try different keywords or clear the filters</small>
+                            </div>
+                        {% else %}
+                            <div class="text-center text-muted">
+                                <i class="fas fa-sync-alt fa-2x mb-3"></i>
+                                <p>Loading visa data...</p>
+                                <small>The system is fetching the latest information from checkvisaslots.com</small>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Current Data Viewer -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h4 class="mb-0"><i class="fas fa-database me-2"></i>Current Visa Data</h4>
+                        <div>
+                            <button class="btn btn-outline-light btn-sm me-2" onclick="refreshData()">
+                                <i class="fas fa-sync-alt me-1"></i>Refresh
+                            </button>
+                            <a href="/latest-data" class="btn btn-outline-light btn-sm" target="_blank">
+                                <i class="fas fa-download me-1"></i>Raw JSON
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        {% if visa_data and visa_data.preview %}
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <p class="text-muted mb-0">
+                                        <i class="fas fa-clock me-1"></i>
+                                        <strong>Last updated:</strong> {{ visa_data.last_updated }}
+                                    </p>
+                                </div>
+                                <div class="col-md-6 text-md-end">
+                                    <p class="text-muted mb-0">
+                                        <i class="fas fa-chart-bar me-1"></i>
+                                        <strong>Showing:</strong> <span class="visible-count">{{ visa_data.total_records if visa_data.total_records else visa_data.preview|length }}</span> of {{ visa_data.total_records if visa_data.total_records else visa_data.preview|length }} records
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Filter/Search -->
+                            <div class="row mb-3">
+                                <div class="col-md-4">
+                                    <input type="text" class="form-control" id="searchFilter" placeholder="Search by visa type or location..." onkeyup="filterData()">
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select" id="subcategoryFilter" onchange="filterData()">
+                                        <option value="">All Subcategories</option>
+                                        <option value="Regular">Regular</option>
+                                        <option value="Dropbox">Dropbox</option>
+                                        <option value="Emergency">Emergency</option>
+                                        <option value="Expedited">Expedited</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-2">
+                                    <select class="form-select" id="freshnessFilter" onchange="filterData()">
+                                        <option value="">All Times</option>
+                                        <option value="fresh">Fresh (≤15 min)</option>
+                                        <option value="recent">Recent (≤1 hour)</option>
+                                        <option value="old">Old (>1 hour)</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select" id="sortBy" onchange="sortData()">
+                                        <option value="update_time">Sort by Update Time</option>
+                                        <option value="visa_type">Sort by Visa Type</option>
+                                        <option value="location">Sort by Location</option>
+                                        <option value="appointments">Sort by Appointments</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Quick Filter Buttons -->
+                            <div class="row mb-3">
+                                <div class="col-12">
+                                    <div class="btn-group flex-wrap" role="group">
+                                        <button type="button" class="btn btn-outline-primary btn-sm" onclick="quickFilterTable('all')">All</button>
+                                        <button type="button" class="btn btn-outline-success btn-sm" onclick="quickFilterTable('Dropbox')">All Dropbox</button>
+                                        <button type="button" class="btn btn-outline-info btn-sm" onclick="quickFilterTable('Regular')">All Regular</button>
+                                        <button type="button" class="btn btn-outline-warning btn-sm" onclick="quickFilterTable('Emergency')">Emergency</button>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="quickFilterTable('fresh')">Fresh (≤15 min)</button>
+                                        <button type="button" class="btn btn-outline-dark btn-sm" onclick="clearFilters()">Clear Filters</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Data Table -->
+                            <div class="table-responsive" style="max-height: 500px; overflow-y: auto;">
+                                <table class="table table-hover" id="visaDataTable">
+                                    <thead class="table-light sticky-top">
+                                        <tr>
+                                            <th>Visa Type</th>
+                                            <th>Location</th>
+                                            <th>Appointments</th>
+                                            <th>Earliest Date</th>
+                                            <th>Last Updated</th>
+                                            <th>Freshness</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for item in visa_data.preview %}
+                                            <tr data-visa-type="{{ item.visa_type }}" data-location="{{ item.location }}">
+                                                <td>
+                                                    <strong>{{ item.visa_type }}</strong>
+                                                    {% if 'Dropbox' in item.visa_type %}
+                                                        <span class="badge bg-success ms-1">Dropbox</span>
+                                                    {% elif 'Emergency' in item.visa_type %}
+                                                        <span class="badge bg-danger ms-1">Emergency</span>
+                                                    {% else %}
+                                                        <span class="badge bg-primary ms-1">Regular</span>
+                                                    {% endif %}
+                                                </td>
+                                                <td>
+                                                    <i class="fas fa-map-marker-alt me-1 text-muted"></i>
+                                                    {{ item.location }}
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-info">{{ item.appointments }} slots</span>
+                                                </td>
+                                                <td>
+                                                    <small class="text-muted">{{ item.earliest_date }}</small>
+                                                </td>
+                                                <td>
+                                                    <small class="text-muted">{{ item.created_on }}</small>
+                                                </td>
+                                                <td>
+                                                    {% if item.relative_minutes %}
+                                                        {% if item.relative_minutes <= 15 %}
+                                                            <span class="badge bg-success">{{ item.relative_time }}</span>
+                                                        {% elif item.relative_minutes <= 60 %}
+                                                            <span class="badge bg-warning">{{ item.relative_time }}</span>
+                                                        {% else %}
+                                                            <span class="badge bg-secondary">{{ item.relative_time }}</span>
+                                                        {% endif %}
+                                                    {% else %}
+                                                        <span class="badge bg-secondary">Unknown</span>
+                                                    {% endif %}
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Legend -->
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <small class="text-muted">
+                                        <strong>Freshness Legend:</strong>
+                                        <span class="badge bg-success ms-2">≤15 min (Fresh)</span>
+                                        <span class="badge bg-warning ms-2">15-60 min (Recent)</span>
+                                        <span class="badge bg-secondary ms-2">>1 hour (Old)</span>
+                                    </small>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="text-center text-muted py-5">
+                                <div class="spinner-border text-primary mb-3" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
+                                <p class="mb-2">Loading visa data...</p>
+                                <small>The system is fetching the latest information from checkvisaslots.com</small>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Test Email Section -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="mb-0"><i class="fas fa-envelope-open me-2"></i>Test Email Configuration</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p class="mb-2">
+                                    <i class="fas fa-info-circle text-info me-2"></i>
+                                    Before receiving notifications, test if email sending is working properly.
+                                </p>
+                                <form method="POST" action="/test-email" class="d-flex">
+                                    <input type="email" class="form-control me-2" name="test_email" 
+                                           placeholder="Enter email to test" required>
+                                    <button type="submit" class="btn btn-outline-primary">
+                                        <i class="fas fa-paper-plane me-1"></i>Send Test
+                                    </button>
+                                </form>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <a href="/latest-data" class="btn btn-outline-secondary">
+                                    <i class="fas fa-download me-1"></i>View Raw Data
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <p class="text-white-50">
+                    <i class="fas fa-shield-alt me-2"></i>
+                    Secure, automated visa slot monitoring • Real-time notifications
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Set last update time from server
+        const lastUpdateTime = {% if visa_data and visa_data.last_updated %}'{{ visa_data.last_updated }}'{% else %}null{% endif %};
+        
+        // Real-time timestamp updates
+        function updateTimestamps() {
+            const now = new Date();
+            
+            // Update last update time if we have visa data
+            const lastUpdateElement = document.getElementById('lastUpdateTime');
+            if (lastUpdateElement) {
+                if (lastUpdateTime) {
+                    const lastUpdate = new Date(lastUpdateTime);
+                    const timeDiff = Math.floor((now - lastUpdate) / 1000 / 60); // minutes ago
+                    
+                    if (timeDiff < 1) {
+                        lastUpdateElement.innerHTML = '<span class="text-success">Just now</span>';
+                    } else if (timeDiff < 15) {
+                        lastUpdateElement.innerHTML = '<span class="text-success">' + timeDiff + 'm ago</span>';
+                    } else if (timeDiff < 60) {
+                        lastUpdateElement.innerHTML = '<span class="text-warning">' + timeDiff + 'm ago</span>';
+                    } else {
+                        const hours = Math.floor(timeDiff / 60);
+                        lastUpdateElement.innerHTML = '<span class="text-danger">' + hours + 'h ago</span>';
+                    }
+                } else {
+                    lastUpdateElement.innerHTML = '<span class="text-muted">No data</span>';
+                }
+            }
+            
+            // Calculate next check countdown (every 10 minutes)
+            const nextCheckElement = document.getElementById('nextCheckCountdown');
+            if (nextCheckElement) {
+                const currentMinute = now.getMinutes();
+                const currentSecond = now.getSeconds();
+                
+                // Next check is at the next 10-minute interval
+                let minutesToNext = 10 - (currentMinute % 10);
+                let secondsToNext = 60 - currentSecond;
+                
+                if (secondsToNext === 60) {
+                    secondsToNext = 0;
+                } else {
+                    minutesToNext--;
+                }
+                
+                if (minutesToNext < 0) minutesToNext = 0;
+                
+                const totalSeconds = (minutesToNext * 60) + secondsToNext;
+                
+                if (totalSeconds <= 30) {
+                    nextCheckElement.innerHTML = '<i class="fas fa-sync-alt fa-spin me-1"></i><strong class="text-primary">Checking now...</strong>';
+                } else {
+                    nextCheckElement.innerHTML = `<i class="fas fa-clock me-1"></i><strong>${minutesToNext}:${secondsToNext.toString().padStart(2, '0')}</strong>`;
+                }
+            }
+        }
+        
+        // Update timestamps every second
+        setInterval(updateTimestamps, 1000);
+        updateTimestamps(); // Initial call
+
+        // Auto-refresh page every 5 minutes to show latest data
+        setTimeout(() => {
+            window.location.reload();
+        }, 300000);
+
+        // Refresh data function
+        function refreshData() {
+            location.reload();
+        }
+
+        // Filter data based on search input and dropdowns
+        function filterData() {
+            const searchTerm = document.getElementById('searchFilter').value.toLowerCase();
+            const subcategoryFilter = document.getElementById('subcategoryFilter').value;
+            const freshnessFilter = document.getElementById('freshnessFilter').value;
+            const table = document.getElementById('visaDataTable');
+            const rows = table.getElementsByTagName('tr');
+            let visibleCount = 0;
+
+            for (let i = 1; i < rows.length; i++) { // Skip header row
+                const row = rows[i];
+                const visaType = row.cells[0].textContent.toLowerCase();
+                const location = row.cells[1].textContent.toLowerCase();
+                const freshnessElement = row.cells[5].querySelector('.badge');
+                const freshnessText = freshnessElement ? freshnessElement.textContent.toLowerCase() : '';
+                
+                let showRow = true;
+
+                // Search filter
+                if (searchTerm && !visaType.includes(searchTerm) && !location.includes(searchTerm)) {
+                    showRow = false;
+                }
+
+                // Subcategory filter
+                if (subcategoryFilter) {
+                    if (!visaType.includes(subcategoryFilter.toLowerCase())) {
+                        showRow = false;
+                    }
+                }
+
+                // Freshness filter
+                if (freshnessFilter) {
+                    switch(freshnessFilter) {
+                        case 'fresh':
+                            if (!freshnessText.includes('minute') || freshnessText.includes('hour') || freshnessText.includes('day')) {
+                                const minutes = extractMinutesFromText(freshnessText);
+                                if (minutes > 15) showRow = false;
+                            }
+                            break;
+                        case 'recent':
+                            if (freshnessText.includes('day') || (freshnessText.includes('hour') && extractMinutesFromText(freshnessText) > 60)) {
+                                showRow = false;
+                            }
+                            break;
+                        case 'old':
+                            if (!freshnessText.includes('hour') && !freshnessText.includes('day')) {
+                                const minutes = extractMinutesFromText(freshnessText);
+                                if (minutes <= 60) showRow = false;
+                            }
+                            break;
+                    }
+                }
+                
+                if (showRow) {
+                    row.style.display = '';
+                    visibleCount++;
+                } else {
+                    row.style.display = 'none';
+                }
+            }
+
+            // Update visible count if element exists
+            const countElement = document.querySelector('.visible-count');
+            if (countElement) {
+                countElement.textContent = visibleCount;
+            }
+        }
+
+        // Quick filter functions for table
+        function quickFilterTable(filterType) {
+            // Reset all filters first
+            document.getElementById('searchFilter').value = '';
+            document.getElementById('subcategoryFilter').value = '';
+            document.getElementById('freshnessFilter').value = '';
+
+            switch(filterType) {
+                case 'all':
+                    break; // Already cleared all filters
+                case 'Dropbox':
+                case 'Regular':
+                case 'Emergency':
+                    document.getElementById('subcategoryFilter').value = filterType;
+                    break;
+                case 'fresh':
+                    document.getElementById('freshnessFilter').value = 'fresh';
+                    break;
+            }
+            
+            filterData();
+        }
+
+        // Clear all filters
+        function clearFilters() {
+            document.getElementById('searchFilter').value = '';
+            document.getElementById('subcategoryFilter').value = '';
+            document.getElementById('freshnessFilter').value = '';
+            filterData();
+        }
+
+        // Helper function to extract minutes from freshness text
+        function extractMinutesFromText(text) {
+            if (text.includes('minute')) {
+                const match = text.match(/\d+/);
+                return match ? parseInt(match[0]) : 0;
+            } else if (text.includes('hour')) {
+                const match = text.match(/\d+/);
+                return match ? parseInt(match[0]) * 60 : 999;
+            } else if (text.includes('day')) {
+                const match = text.match(/\d+/);
+                return match ? parseInt(match[0]) * 1440 : 9999;
+            }
+            return 0;
+        }
+
+        // Sort data based on selected criteria
+        function sortData() {
+            const sortBy = document.getElementById('sortBy').value;
+            const table = document.getElementById('visaDataTable');
+            const tbody = table.getElementsByTagName('tbody')[0];
+            const rows = Array.from(tbody.getElementsByTagName('tr'));
+
+            rows.sort((a, b) => {
+                let aValue, bValue;
+                
+                switch(sortBy) {
+                    case 'visa_type':
+                        aValue = a.cells[0].textContent.trim();
+                        bValue = b.cells[0].textContent.trim();
+                        break;
+                    case 'location':
+                        aValue = a.cells[1].textContent.trim();
+                        bValue = b.cells[1].textContent.trim();
+                        break;
+                    case 'appointments':
+                        aValue = parseInt(a.cells[2].textContent.match(/\d+/)[0]);
+                        bValue = parseInt(b.cells[2].textContent.match(/\d+/)[0]);
+                        return bValue - aValue; // Descending for appointments
+                    case 'update_time':
+                    default:
+                        // Sort by freshness (newest first)
+                        const aFreshness = a.cells[5].querySelector('.badge').textContent;
+                        const bFreshness = b.cells[5].querySelector('.badge').textContent;
+                        
+                        // Extract minutes for comparison
+                        const getMinutes = (text) => {
+                            if (text.includes('minute')) {
+                                const match = text.match(/\d+/);
+                                return match ? parseInt(match[0]) : 999;
+                            } else if (text.includes('hour')) {
+                                const match = text.match(/\d+/);
+                                return match ? parseInt(match[0]) * 60 : 9999;
+                            } else if (text.includes('day')) {
+                                const match = text.match(/\d+/);
+                                return match ? parseInt(match[0]) * 1440 : 99999;
+                            }
+                            return 999999;
+                        };
+                        
+                        return getMinutes(aFreshness) - getMinutes(bFreshness);
+                }
+                
+                if (typeof aValue === 'string') {
+                    return aValue.localeCompare(bValue);
+                }
+                return aValue - bValue;
+            });
+
+            // Clear and re-append sorted rows
+            tbody.innerHTML = '';
+            rows.forEach(row => tbody.appendChild(row));
+        }
+
+        // Initialize table on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set default sort
+            if (document.getElementById('visaDataTable')) {
+                sortData();
+            }
+        });
+
+        // Filter visa data in the Current Visa Slots section
+        function filterVisaData() {
+            const searchTerm = document.getElementById('visaSearch').value.toLowerCase();
+            const categoryFilter = document.getElementById('categoryFilter').value;
+            const visaItems = document.querySelectorAll('.visa-item');
+            const noResults = document.getElementById('noResults');
+            let visibleCount = 0;
+
+            visaItems.forEach(item => {
+                const visaType = item.dataset.visaType.toLowerCase();
+                const location = item.dataset.location.toLowerCase();
+                
+                // Check search term match
+                const searchMatch = visaType.includes(searchTerm) || location.includes(searchTerm);
+                
+                // Check category filter match
+                let categoryMatch = true;
+                if (categoryFilter) {
+                    categoryMatch = visaType.includes(categoryFilter.toLowerCase());
+                }
+                
+                if (searchMatch && categoryMatch) {
+                    item.style.display = '';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            // Update visible count
+            document.getElementById('visibleCount').textContent = visibleCount;
+            
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.style.display = 'block';
+            } else {
+                noResults.style.display = 'none';
+            }
+        }
+
+        // Quick filter function for visa categories
+        function quickFilter(category) {
+            const searchInput = document.getElementById('visaSearch');
+            const categorySelect = document.getElementById('categoryFilter');
+            
+            // Update active button styling
+            document.querySelectorAll('.btn-group .btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event.target.classList.add('active');
+            
+            if (category === 'all') {
+                searchInput.value = '';
+                categorySelect.value = '';
+            } else if (category === 'Dropbox') {
+                searchInput.value = '';
+                categorySelect.value = 'Dropbox';
+            } else {
+                searchInput.value = category;
+                categorySelect.value = '';
+            }
+            
+            filterVisaData();
+        }
+
+        // Show/hide visa details when clicked
+        function showVisaDetails(element) {
+            const details = element.querySelector('.visa-details');
+            const isExpanded = element.classList.contains('expanded');
+            
+            // Close all other expanded items
+            document.querySelectorAll('.visa-item.expanded').forEach(item => {
+                if (item !== element) {
+                    item.classList.remove('expanded');
+                    item.querySelector('.visa-details').style.display = 'none';
+                }
+            });
+            
+            if (isExpanded) {
+                element.classList.remove('expanded');
+                details.style.display = 'none';
+            } else {
+                element.classList.add('expanded');
+                details.style.display = 'block';
+            }
+        }
+
+        // Quick subscribe function
+        function quickSubscribe(visaType, location) {
+            // Pre-fill the subscription form
+            const emailInput = document.getElementById('email');
+            if (!emailInput.value) {
+                alert('Please enter your email address in the subscription form first!');
+                emailInput.focus();
+                return;
+            }
+            
+            // Find and check the corresponding visa type checkbox
+            const visaCheckboxes = document.querySelectorAll('input[name="visa_types"]');
+            visaCheckboxes.forEach(checkbox => {
+                if (checkbox.value === visaType) {
+                    checkbox.checked = true;
+                }
+            });
+            
+            // Find and check the corresponding location checkbox
+            const locationCheckboxes = document.querySelectorAll('input[name="locations"]');
+            locationCheckboxes.forEach(checkbox => {
+                if (checkbox.value === location) {
+                    checkbox.checked = true;
+                }
+            });
+            
+            // Scroll to subscription form
+            document.querySelector('.card-header h4').scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'start'
+            });
+            
+            // Show success message
+            alert(`Pre-filled subscription for ${visaType} in ${location}!\nReview and click "Subscribe to Alerts" to confirm.`);
+        }
+    </script>
+</body>
+</html>
