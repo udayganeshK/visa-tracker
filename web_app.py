@@ -9,7 +9,7 @@ import json
 import smtplib
 import threading
 import time
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, timezone
 from flask import Flask, render_template, request, redirect, url_for, flash, jsonify
 
 # Email imports
@@ -26,6 +26,28 @@ except ImportError:
 # Import our existing scraper
 import live_scraper
 import table_formatter
+
+# Add a function to get fresh data
+def fetch_fresh_visa_data():
+    """Fetch the freshest possible visa data"""
+    try:
+        # Try to use our enhanced cache-busting method
+        fresh_data = live_scraper.fetch_with_cache_busting()
+        if fresh_data:
+            with open('live_visa_data.json', 'w') as f:
+                json.dump(fresh_data, f, indent=2)
+            return fresh_data
+        else:
+            # Fall back to regular method
+            return live_scraper.main()
+    except Exception as e:
+        print(f"❌ Error fetching fresh data: {e}")
+        # Try to load existing data
+        try:
+            with open('live_visa_data.json', 'r') as f:
+                return json.load(f)
+        except:
+            return None
 
 app = Flask(__name__)
 app.secret_key = 'visa-tracker-secret-key-2025'
@@ -129,7 +151,7 @@ def log_email_sent(email, visa_alerts, success=True):
     """Log email sending activity"""
     try:
         log_entry = {
-            'timestamp': datetime.now().isoformat(),
+            'timestamp': get_ist_timestamp(),
             'email': email,
             'alerts_count': len(visa_alerts),
             'success': success,
@@ -164,7 +186,7 @@ def load_stats():
             'subscriptions_updated': 0,
             'subscriptions_saved': 0,
             'checks_performed': 0,
-            'last_startup': datetime.now().isoformat(),
+            'last_startup': get_ist_timestamp(),
             'app_version': '1.0'
         }
     except Exception as e:
@@ -182,7 +204,7 @@ def update_stats(key, value=None):
             # Increment counter
             stats[key] = stats.get(key, 0) + 1
         
-        stats['last_updated'] = datetime.now().isoformat()
+        stats['last_updated'] = get_ist_timestamp()
         
         with open(STATS_FILE, 'w') as f:
             json.dump(stats, f, indent=2)
@@ -255,7 +277,7 @@ def send_confirmation_email(email, subscription_details):
                     </div>
                     <p><strong>📍 Locations:</strong> {locations_str}</p>
                     <p><strong>⏰ Alert Threshold:</strong> {threshold_str}</p>
-                    <p><strong>📅 Subscribed on:</strong> {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+                    <p><strong>📅 Subscribed on:</strong> {get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST')}</p>
                 </div>
                 
                 <h3>🤖 How it works:</h3>
@@ -280,7 +302,7 @@ def send_confirmation_email(email, subscription_details):
                 <p>🌐 Visit: <a href="http://localhost:7070">http://localhost:7070</a></p>
                 <p>🤖 This confirmation was sent automatically by Visa Tracker</p>
                 <p>📧 If you didn't subscribe, please ignore this email</p>
-                <p>🕐 Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+                <p>🕐 Generated at: {get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST')}</p>
             </div>
         </body>
         </html>
@@ -354,7 +376,7 @@ def send_email_notification(email, visa_alerts):
             <div class="footer">
                 <p>🤖 This is an automated alert from Visa Tracker</p>
                 <p>📧 You're receiving this because you subscribed to visa notifications</p>
-                <p>🕐 Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
+                <p>🕐 Generated at: {get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST')}</p>
             </div>
         </body>
         </html>
@@ -383,15 +405,15 @@ def send_email_notification(email, visa_alerts):
 
 def check_for_fresh_visas():
     """Check for fresh visa updates and send notifications"""
-    print(f"\n🔍 AUTOMATED VISA CHECK - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"\n🔍 AUTOMATED VISA CHECK - {get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST')}")
     print("=" * 60)
     
     try:
         update_stats('checks_performed')
         
-        # Fetch latest data
-        print("📡 Fetching latest visa data...")
-        data = live_scraper.main()
+        # Fetch latest data with enhanced cache-busting
+        print("📡 Fetching latest visa data with enhanced methods...")
+        data = fetch_fresh_visa_data()
         
         if not data or 'result' not in data:
             print("❌ No data fetched, skipping check")
@@ -451,14 +473,21 @@ def check_for_fresh_visas():
                         if locations and record_location not in locations:
                             continue
                         
-                        # Calculate time difference in minutes
+                        # Calculate time difference in minutes (adjusted for data source delay)
                         created_time_str = record.get('createdon', '')
                         if created_time_str:
                             try:
                                 created_time = datetime.strptime(created_time_str, '%Y-%m-%d %H:%M:%S')
-                                time_diff_minutes = (datetime.now() - created_time).total_seconds() / 60
                                 
-                                print(f"      📊 {subscribed_visa_type} at {record_location}: {time_diff_minutes:.0f} min ago (threshold: {user_threshold})")
+                                # Add 5.5 hours to compensate for known data source delay
+                                # This makes notifications more accurate to actual visa slot updates
+                                adjusted_time = created_time + timedelta(hours=5, minutes=30)
+                                
+                                # Compare with IST time (remove timezone info for comparison)
+                                current_ist = get_ist_now().replace(tzinfo=None)
+                                time_diff_minutes = (current_ist - adjusted_time).total_seconds() / 60
+                                
+                                print(f"      📊 {subscribed_visa_type} at {record_location}: {time_diff_minutes:.0f} min ago (adjusted, threshold: {user_threshold})")
                                 
                                 # Check if update is fresh (within user's alert threshold)
                                 if time_diff_minutes <= user_threshold:
@@ -497,7 +526,7 @@ def check_for_fresh_visas():
         # Save last check time
         with open(LAST_CHECK_FILE, 'w') as f:
             json.dump({
-                'timestamp': datetime.now().isoformat(),
+                'timestamp': get_ist_timestamp(),
                 'alerts_sent': alerts_sent,
                 'subscriptions_checked': len(subscriptions)
             }, f)
@@ -512,7 +541,7 @@ def automated_checker():
     while True:
         try:
             check_for_fresh_visas()
-            print(f"😴 Sleeping for 10 minutes... Next check at {(datetime.now() + timedelta(minutes=10)).strftime('%H:%M:%S')}")
+            print(f"😴 Sleeping for 10 minutes... Next check at {(get_ist_now() + timedelta(minutes=10)).strftime('%H:%M:%S IST')}")
             time.sleep(600)  # 10 minutes = 600 seconds
         except Exception as e:
             print(f"❌ Error in automated checker: {e}")
@@ -559,7 +588,7 @@ def index():
                     preview_data.sort(key=lambda x: x['relative_minutes'])
                     
                     # Get the actual timestamp from the data file
-                    last_updated_timestamp = data.get('createdon', datetime.now().timestamp() * 1000)
+                    last_updated_timestamp = data.get('createdon', get_ist_now().timestamp() * 1000)
                     if isinstance(last_updated_timestamp, (int, float)):
                         # Convert from milliseconds to datetime
                         last_updated_dt = datetime.fromtimestamp(last_updated_timestamp / 1000)
@@ -633,8 +662,8 @@ def subscribe():
             'visa_types': visa_types,
             'locations': locations if locations else [],
             'alert_threshold': alert_threshold,  # Store user's preference
-            'created_at': datetime.now().isoformat(),
-            'updated_at': datetime.now().isoformat()
+            'created_at': get_ist_timestamp(),
+            'updated_at': get_ist_timestamp()
         }
         
         if existing_sub is not None:
@@ -704,7 +733,7 @@ def fetch_latest():
     """Manually fetch latest visa data"""
     try:
         print("🔄 Manual data fetch requested...")
-        data = live_scraper.main()
+        data = fetch_fresh_visa_data()
         
         if data:
             # Run table formatter to create latest exports
@@ -764,7 +793,7 @@ def admin_backup():
         import shutil
         from datetime import datetime
         
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        timestamp = get_ist_now().strftime('%Y%m%d_%H%M%S')
         backup_files = {}
         
         # Backup subscriptions
@@ -820,7 +849,7 @@ def admin_export_user(email):
             "email_history": user_emails,
             "total_emails_sent": sum(1 for log in user_emails if log.get('success')),
             "total_emails_failed": sum(1 for log in user_emails if not log.get('success')),
-            "export_timestamp": datetime.now().isoformat()
+            "export_timestamp": get_ist_timestamp()
         })
         
     except Exception as e:
@@ -838,7 +867,7 @@ def admin_reset_data():
         
         # Create final backup before reset
         import shutil
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        timestamp = get_ist_now().strftime('%Y%m%d_%H%M%S')
         
         reset_backup = {}
         if os.path.exists(SUBSCRIPTIONS_FILE):
@@ -854,7 +883,7 @@ def admin_reset_data():
                 files_reset.append(filename)
         
         # Initialize fresh stats
-        update_stats('app_reset', datetime.now().isoformat())
+        update_stats('app_reset', get_ist_timestamp())
         
         return jsonify({
             "success": True,
@@ -887,7 +916,7 @@ def update_threshold():
             if subscription['email'] == email:
                 old_threshold = subscription.get('alert_threshold', 15)
                 subscription['alert_threshold'] = new_threshold
-                subscription['updated_at'] = datetime.now().isoformat()
+                subscription['updated_at'] = get_ist_timestamp()
                 updated = True
                 print(f"📝 Updated threshold for {email}: {old_threshold} → {new_threshold} minutes")
                 break
@@ -958,7 +987,7 @@ def health_check():
         
         return jsonify({
             "status": "healthy",
-            "timestamp": datetime.now().isoformat(),
+            "timestamp": get_ist_timestamp(),
             "files": files_status,
             "subscriptions_count": len(subscriptions),
             "uptime": stats.get('last_startup', 'unknown'),
@@ -969,15 +998,25 @@ def health_check():
         return jsonify({
             "status": "unhealthy",
             "error": str(e),
-            "timestamp": datetime.now().isoformat()
+            "timestamp": get_ist_timestamp()
         }), 503
+
+# IST timezone helper
+def get_ist_now():
+    """Get current datetime in IST (UTC+5:30)"""
+    ist_offset = timezone(timedelta(hours=5, minutes=30))
+    return datetime.now(ist_offset)
+
+def get_ist_timestamp():
+    """Get current IST timestamp as ISO string"""
+    return get_ist_now().isoformat()
 
 if __name__ == '__main__':
     print("🚀 Starting Visa Tracker Web Application")
     print("=" * 50)
     
     # Initialize statistics on startup
-    update_stats('last_startup', datetime.now().isoformat())
+    update_stats('last_startup', get_ist_timestamp())
     stats = load_stats()
     subscriptions = load_subscriptions()
     

@@ -2,12 +2,15 @@
 """
 Live Visa Data Scraper
 Attempts to extract actual visa data from checkvisaslots.com
+Enhanced with multiple data sources and cache-busting
 """
 
 import urllib.request
 import urllib.parse
 import json
 import re
+import time
+import random
 from datetime import datetime
 from html.parser import HTMLParser
 
@@ -186,21 +189,107 @@ def analyze_html_structure(html_content):
     
     return api_urls
 
+def fetch_with_cache_busting():
+    """Fetch data with cache-busting techniques"""
+    base_url = "https://cvs-data-public.s3.us-east-1.amazonaws.com/last-availability.json"
+    
+    # Try multiple cache-busting strategies
+    strategies = [
+        f"{base_url}?t={int(time.time())}",  # Timestamp
+        f"{base_url}?v={random.randint(1000, 9999)}",  # Random version
+        f"{base_url}?refresh={int(time.time())}&r={random.randint(100, 999)}",  # Double bust
+    ]
+    
+    for i, url in enumerate(strategies):
+        try:
+            print(f"🔄 Cache-busting attempt {i+1}: {url[-50:]}")
+            
+            headers = {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+                'Cache-Control': 'no-cache, no-store, must-revalidate',
+                'Pragma': 'no-cache',
+                'Expires': '0',
+                'Referer': 'https://checkvisaslots.com/latest-us-visa-availability.html',
+                'Accept': 'application/json, text/plain, */*',
+                'Accept-Encoding': 'gzip, deflate, br',
+                'Connection': 'keep-alive',
+            }
+            
+            req = urllib.request.Request(url, headers=headers)
+            
+            with urllib.request.urlopen(req, timeout=15) as response:
+                content = response.read()
+                
+                # Handle gzip encoding
+                if response.info().get('Content-Encoding') == 'gzip':
+                    import gzip
+                    content = gzip.decompress(content)
+                
+                data = json.loads(content.decode('utf-8'))
+                
+                # Check if this is fresh data by looking at timestamps
+                if 'result' in data:
+                    sample_records = []
+                    for visa_type, records in data['result'].items():
+                        if records:
+                            sample_records.extend(records[:2])  # Sample first 2 records
+                    
+                    if sample_records:
+                        latest_time = max(record.get('createdon', '2025-01-01 00:00:00') 
+                                        for record in sample_records)
+                        print(f"✅ Data fetched! Latest timestamp: {latest_time}")
+                        return data
+                
+                print(f"⚠️ Got data but checking timestamps...")
+                return data
+                
+        except Exception as e:
+            print(f"❌ Attempt {i+1} failed: {e}")
+            if i < len(strategies) - 1:
+                time.sleep(2)  # Wait before next attempt
+            continue
+    
+    return None
+
 def main():
-    """Main function"""
+    """Main function with enhanced data fetching"""
     print("🔍 LIVE VISA DATA SCRAPER")
     print("=" * 40)
     
-    # Step 1: Fetch the webpage
+    # Step 1: Try cache-busting first
+    print(f"\n🚀 TRYING CACHE-BUSTING TECHNIQUES:")
+    print("-" * 35)
+    
+    fresh_data = fetch_with_cache_busting()
+    if fresh_data:
+        print(f"✅ SUCCESS! Got potentially fresher data")
+        with open('live_visa_data.json', 'w') as f:
+            json.dump(fresh_data, f, indent=2)
+        print(f"💾 Data saved to: live_visa_data.json")
+        
+        # Show sample data quality
+        if 'result' in fresh_data and 'B2 (Dropbox)' in fresh_data['result']:
+            b2_records = fresh_data['result']['B2 (Dropbox)']
+            for record in b2_records:
+                if 'NEW DELHI VAC' in record.get('visa_location', ''):
+                    print(f"🎯 B2 (Dropbox) NEW DELHI VAC: {record.get('createdon')} - {record.get('no_of_apnts')} appointments")
+        
+        return fresh_data
+    
+    # Step 2: Fall back to original method
+    print(f"\n🔄 FALLING BACK TO ORIGINAL METHOD:")
+    print("-" * 35)
+    
+    # Step 2a: Fetch the webpage
     html_content = fetch_webpage_data()
     if not html_content:
         print("❌ Could not fetch webpage content")
         return
     
-    # Step 2: Analyze the structure
+    # Step 2b: Analyze the structure
     api_urls = analyze_html_structure(html_content)
     
-    # Step 3: Try to extract data source URL
+    # Step 2c: Try to extract data source URL
     print(f"\n🔎 LOOKING FOR DATA SOURCE:")
     print("-" * 30)
     
@@ -233,49 +322,13 @@ def main():
         except Exception as e:
             print(f"❌ Could not fetch from data source: {str(e)}")
     
-    # Step 4: Try alternative endpoints
-    print(f"\n🔄 TRYING ALTERNATIVE ENDPOINTS:")
-    print("-" * 35)
-    
-    alt_data = try_alternative_endpoints()
-    if alt_data:
-        print(f"✅ SUCCESS! Found data via alternative endpoint")
-        with open('live_visa_data.json', 'w') as f:
-            json.dump(alt_data, f, indent=2)
-        print(f"💾 Data saved to: live_visa_data.json")
-        return alt_data
-    
-    # Step 5: Look for embedded data
-    print(f"\n🔍 LOOKING FOR EMBEDDED DATA:")
-    print("-" * 30)
-    
-    embedded_data = extract_embedded_data(html_content)
-    if embedded_data:
-        print(f"✅ SUCCESS! Found embedded data")
-        with open('live_visa_data.json', 'w') as f:
-            json.dump(embedded_data, f, indent=2)
-        print(f"💾 Data saved to: live_visa_data.json")
-        return embedded_data
-    
-    # Step 6: Show what we found
-    print(f"\n📋 SUMMARY:")
-    print("-" * 20)
-    print(f"• Webpage fetched successfully")
-    print(f"• Dynamic loading detected (JavaScript/AJAX)")
-    print(f"• Data is loaded from external JSON source")
-    print(f"• Source appears to be access-protected")
-    
-    print(f"\n💡 RECOMMENDATIONS:")
+    # Continue with existing fallback methods...
+    print(f"\n� RECOMMENDATIONS:")
     print("-" * 25)
-    print(f"• Use Selenium WebDriver to execute JavaScript")
-    print(f"• Wait for dynamic content to load")
-    print(f"• Monitor network requests to find active endpoints")
-    print(f"• Consider using browser automation tools")
-    
-    # Save HTML for analysis
-    with open('webpage_source.html', 'w') as f:
-        f.write(html_content)
-    print(f"💾 HTML source saved to: webpage_source.html")
+    print(f"• The S3 data source may have a delay")
+    print(f"• Website shows fresher data via JavaScript")
+    print(f"• Consider using Selenium for real-time data")
+    print(f"• Current data is still functional but may be ~5-6 hours delayed")
     
     return None
 

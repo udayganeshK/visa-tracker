@@ -105,6 +105,24 @@
         .btn-group .btn {
             margin: 2px;
         }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        .card.border-success {
+            border-width: 2px !important;
+        }
+        
+        .card.border-info {
+            border-width: 2px !important;
+        }
     </style>
 </head>
 <body>
@@ -227,24 +245,118 @@
         <!-- Main Content -->
         <div class="row">
             <!-- Subscription Form -->
-            <div class="col-lg-6 mb-4">
+            <div class="col-lg-8 mb-4">
                 <div class="card h-100">
                     <div class="card-header">
                         <h4 class="mb-0"><i class="fas fa-user-plus me-2"></i>Subscribe to Notifications</h4>
                     </div>
                     <div class="card-body">
                         <form method="POST" action="/subscribe">
-                            <!-- Email Input -->
-                            <div class="mb-4">
-                                <label for="email" class="form-label fw-bold">
-                                    <i class="fas fa-envelope me-2"></i>Email Address
-                                </label>
-                                <input type="email" class="form-control" id="email" name="email" 
-                                       placeholder="your-email@example.com" required>
-                                <div class="form-text">We'll send you alerts for fresh visa appointments</div>
+                            <div class="row">
+                                <!-- Left Column -->
+                                <div class="col-md-6">
+                                    <!-- Email Input -->
+                                    <div class="mb-4">
+                                        <label for="email" class="form-label fw-bold">
+                                            <i class="fas fa-envelope me-2"></i>Email Address
+                                        </label>
+                                        <input type="email" class="form-control" id="email" name="email" 
+                                               placeholder="your-email@example.com" required>
+                                        <div class="form-text">We'll send you alerts for fresh visa appointments</div>
+                                    </div>
+
+                                    <!-- Alert Threshold -->
+                                    <div class="mb-4">
+                                        <label for="alert_threshold" class="form-label fw-bold">
+                                            <i class="fas fa-clock me-2"></i>Alert Threshold
+                                        </label>
+                                        <select class="form-select" name="alert_threshold" id="alert_threshold" required>
+                                            <option value="1">1 minute (Ultra Fresh)</option>
+                                            <option value="5">5 minutes (Very Fresh)</option>
+                                            <option value="10">10 minutes (Fresh)</option>
+                                            <option value="15" selected>15 minutes (Default)</option>
+                                            <option value="30">30 minutes</option>
+                                            <option value="60">1 hour</option>
+                                            <option value="120">2 hours</option>
+                                            <option value="180">3 hours</option>
+                                            <option value="300">5 hours</option>
+                                            <option value="600">10 hours</option>
+                                            <option value="1440">24 hours (Any Update)</option>
+                                        </select>
+                                        <div class="form-text">Only get alerts for visa slots updated within this timeframe</div>
+                                    </div>
+                                </div>
+
+                                <!-- Right Column -->
+                                <div class="col-md-6">
+                                    <!-- Quick Statistics -->
+                                    <div class="mb-4">
+                                        <h6 class="fw-bold text-success">
+                                            <i class="fas fa-chart-line me-2"></i>Live Statistics
+                                        </h6>
+                                        <div class="card bg-light">
+                                            <div class="card-body p-3">
+                                                <div class="row text-center">
+                                                    <div class="col-4">
+                                                        <div class="text-primary fw-bold">{{ visa_data.total_records if visa_data else 0 }}</div>
+                                                        <small class="text-muted">Total Slots</small>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="text-success fw-bold">{{ stats.active_subscriptions if stats else 0 }}</div>
+                                                        <small class="text-muted">Subscribers</small>
+                                                    </div>
+                                                    <div class="col-4">
+                                                        <div class="text-info fw-bold">{{ stats.emails_sent if stats else 0 }}</div>
+                                                        <small class="text-muted">Alerts Sent</small>
+                                                    </div>
+                                                </div>
+                                                {% if visa_data and visa_data.last_updated %}
+                                                <div class="mt-2 pt-2 border-top">
+                                                    <small class="text-muted">
+                                                        <i class="fas fa-clock me-1"></i>
+                                                        Last updated: {{ visa_data.last_updated }} IST
+                                                    </small>
+                                                    <br>
+                                                    <small class="text-warning">
+                                                        <i class="fas fa-info-circle me-1"></i>
+                                                        Times adjusted for data source delay (~5.5h)
+                                                    </small>
+                                                </div>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- How It Works -->
+                                    <div class="mb-4">
+                                        <h6 class="fw-bold text-info">
+                                            <i class="fas fa-info-circle me-2"></i>How It Works
+                                        </h6>
+                                        <div class="card bg-light">
+                                            <div class="card-body p-3">
+                                                <div class="d-flex align-items-start mb-2">
+                                                    <span class="badge bg-primary me-2">1</span>
+                                                    <small>Choose your visa types and locations</small>
+                                                </div>
+                                                <div class="d-flex align-items-start mb-2">
+                                                    <span class="badge bg-success me-2">2</span>
+                                                    <small>Set your preferred alert threshold</small>
+                                                </div>
+                                                <div class="d-flex align-items-start mb-2">
+                                                    <span class="badge bg-warning me-2">3</span>
+                                                    <small>We monitor checkvisaslots.com every 10 minutes</small>
+                                                </div>
+                                                <div class="d-flex align-items-start">
+                                                    <span class="badge bg-danger me-2">4</span>
+                                                    <small>Get instant email alerts for fresh slots</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
-                            <!-- Visa Types -->
+                            <!-- Visa Types Section (Full Width) -->
                             <div class="mb-4">
                                 <label class="form-label fw-bold">
                                     <i class="fas fa-passport me-2"></i>Visa Types & Subcategories
@@ -638,145 +750,86 @@
                 </div>
             </div>
 
-            <!-- Current Data Preview -->
-            <div class="col-lg-6 mb-4">
-                <div class="card h-100">
-                    <div class="card-header">
-                        <h4 class="mb-0"><i class="fas fa-chart-line me-2"></i>Current Visa Slots</h4>
+            <!-- Information Panel -->
+            <div class="col-lg-4 mb-4">
+                <div class="row">
+                    <!-- Quick Tips Card -->
+                    <div class="col-12 mb-4">
+                        <div class="card h-100 border-success">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0"><i class="fas fa-info-circle me-2"></i>Usage Guide</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <h6 class="text-success"><i class="fas fa-star me-1"></i>General Tips</h6>
+                                    <ul class="list-unstyled small">
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Lower thresholds give more <strong>frequent alerts</strong></li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Consider <strong>multiple visa types</strong> if eligible</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Monitor <strong>all locations</strong> for more options</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Enable email notifications for quick action</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="mb-3">
+                                    <h6 class="text-info"><i class="fas fa-info-circle me-1"></i>How Alerts Work</h6>
+                                    <small class="text-muted">This system monitors checkvisaslots.com:</small>
+                                    <ul class="list-unstyled small mt-1">
+                                        <li><i class="fas fa-clock me-1 text-primary"></i>Checks every 10 minutes automatically</li>
+                                        <li><i class="fas fa-envelope me-1 text-warning"></i>Sends alerts for fresh updates only</li>
+                                        <li><i class="fas fa-shield-alt me-1 text-success"></i>No guarantee - official sources are authoritative</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        {% if visa_data and visa_data.preview %}
-                            <!-- Search and Filter Section -->
-                            <div class="mb-3">
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <input type="text" class="form-control" id="visaSearch" 
-                                               placeholder="Search visa types (e.g., F, H, B1, Dropbox)..." 
-                                               onkeyup="filterVisaData()">
+
+                    <!-- Status Card -->
+                    <div class="col-12">
+                        <div class="card h-100 border-info">
+                            <div class="card-header bg-info text-white">
+                                <h5 class="mb-0"><i class="fas fa-chart-pie me-2"></i>System Status</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row text-center mb-3">
+                                    <div class="col-6">
+                                        <div class="text-primary display-6 fw-bold">{{ visa_data.total_records if visa_data and visa_data.total_records else '0' }}</div>
+                                        <small class="text-muted">Available Slots</small>
                                     </div>
-                                    <div class="col-md-4">
-                                        <select class="form-select" id="categoryFilter" onchange="filterVisaData()">
-                                            <option value="">All Categories</option>
-                                            <option value="Regular">Regular</option>
-                                            <option value="Dropbox">Dropbox</option>
-                                            <option value="Emergency">Emergency</option>
-                                        </select>
+                                    <div class="col-6">
+                                        <div class="text-success display-6 fw-bold">{{ stats.active_subscriptions if stats and stats.active_subscriptions else '0' }}</div>
+                                        <small class="text-muted">Active Users</small>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- Quick Filter Buttons -->
-                            <div class="mb-3">
-                                <div class="btn-group flex-wrap" role="group">
-                                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="quickFilter('all')">All</button>
-                                    <button type="button" class="btn btn-outline-primary btn-sm" onclick="quickFilter('B')">B1/B2</button>
-                                    <button type="button" class="btn btn-outline-success btn-sm" onclick="quickFilter('F')">F (Student)</button>
-                                    <button type="button" class="btn btn-outline-warning btn-sm" onclick="quickFilter('H')">H (Work)</button>
-                                    <button type="button" class="btn btn-outline-info btn-sm" onclick="quickFilter('J')">J (Exchange)</button>
-                                    <button type="button" class="btn btn-outline-danger btn-sm" onclick="quickFilter('L')">L (Transfer)</button>
-                                    <button type="button" class="btn btn-outline-secondary btn-sm" onclick="quickFilter('Dropbox')">Dropbox</button>
+                                
+                                <div class="row text-center">
+                                    <div class="col-6">
+                                        <div class="text-warning fw-bold">{{ stats.emails_sent if stats and stats.emails_sent else '0' }}</div>
+                                        <small class="text-muted">Alerts Sent</small>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="text-info fw-bold">{{ stats.checks_performed if stats and stats.checks_performed else '0' }}</div>
+                                        <small class="text-muted">Data Checks</small>
+                                    </div>
+                                </div>
+                                
+                                {% if visa_data and visa_data.last_updated %}
+                                <div class="mt-3 pt-3 border-top">
+                                    <small class="text-muted">
+                                        <i class="fas fa-sync-alt me-1"></i>
+                                        <strong>Last Update:</strong><br>
+                                        {{ visa_data.last_updated }} IST
+                                    </small>
+                                </div>
+                                {% endif %}
+                                
+                                <div class="mt-2">
+                                    <span class="badge bg-success">
+                                        <i class="fas fa-circle me-1" style="animation: pulse 2s infinite;"></i>
+                                        Live Monitoring
+                                    </span>
                                 </div>
                             </div>
-                            
-                            <p class="text-muted mb-3">
-                                <i class="fas fa-clock me-1"></i>
-                                Last updated: {{ visa_data.last_updated }}
-                                <span class="ms-3">
-                                    <i class="fas fa-chart-bar me-1"></i>
-                                    <span id="visibleCount">{{ visa_data.preview|length }}</span> of {{ visa_data.preview|length }} records
-                                </span>
-                            </p>
-
-                            <!-- Visa Data Container -->
-                            <div id="visaDataContainer" style="max-height: 400px; overflow-y: auto;">
-                                {% for item in visa_data.preview %}
-                                    <div class="visa-item border-bottom pb-2 mb-2" 
-                                         data-visa-type="{{ item.visa_type }}" 
-                                         data-location="{{ item.location }}"
-                                         onclick="showVisaDetails(this)">
-                                        <div class="d-flex justify-content-between align-items-start">
-                                            <div class="flex-grow-1">
-                                                <div class="d-flex align-items-center mb-1">
-                                                    <strong class="visa-type-text">{{ item.visa_type }}</strong>
-                                                    {% if 'Dropbox' in item.visa_type %}
-                                                        <span class="badge bg-success ms-2">Dropbox</span>
-                                                    {% elif 'Emergency' in item.visa_type %}
-                                                        <span class="badge bg-danger ms-2">Emergency</span>
-                                                    {% else %}
-                                                        <span class="badge bg-primary ms-2">Regular</span>
-                                                    {% endif %}
-                                                    
-                                                    <!-- Freshness indicator -->
-                                                    {% if item.relative_minutes %}
-                                                        {% if item.relative_minutes <= 15 %}
-                                                            <span class="badge bg-success ms-1">Fresh</span>
-                                                        {% elif item.relative_minutes <= 60 %}
-                                                            <span class="badge bg-warning ms-1">Recent</span>
-                                                        {% else %}
-                                                            <span class="badge bg-secondary ms-1">Old</span>
-                                                        {% endif %}
-                                                    {% endif %}
-                                                </div>
-                                                
-                                                <small class="text-muted d-block">
-                                                    <i class="fas fa-map-marker-alt me-1"></i>{{ item.location }}
-                                                </small>
-                                                
-                                                <!-- Hidden details for expansion -->
-                                                <div class="visa-details" style="display: none;">
-                                                    <div class="mt-2 p-2 bg-light rounded">
-                                                        <div class="row">
-                                                            <div class="col-6">
-                                                                <small><strong>Appointments:</strong> {{ item.appointments }}</small>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <small><strong>Earliest Date:</strong> {{ item.earliest_date }}</small>
-                                                            </div>
-                                                        </div>
-                                                        <div class="row mt-1">
-                                                            <div class="col-6">
-                                                                <small><strong>Last Updated:</strong> {{ item.created_on }}</small>
-                                                            </div>
-                                                            <div class="col-6">
-                                                                <small><strong>Freshness:</strong> {{ item.relative_time }}</small>
-                                                            </div>
-                                                        </div>
-                                                        
-                                                        <!-- Quick Subscribe Button -->
-                                                        <div class="mt-2">
-                                                            <button class="btn btn-outline-primary btn-sm" 
-                                                                    onclick="quickSubscribe('{{ item.visa_type }}', '{{ item.location }}'); event.stopPropagation();">
-                                                                <i class="fas fa-bell me-1"></i>Quick Subscribe
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="text-end">
-                                                <span class="badge bg-info">{{ item.appointments }} slots</span>
-                                                <br>
-                                                <small class="text-muted">{{ item.earliest_date }}</small>
-                                                <br>
-                                                <i class="fas fa-chevron-down text-muted expand-icon" style="font-size: 0.8rem;"></i>
-                                            </div>
-                                        </div>
-                                    </div>
-                                {% endfor %}
-                            </div>
-
-                            <!-- No Results Message -->
-                            <div id="noResults" style="display: none;" class="text-center text-muted py-4">
-                                <i class="fas fa-search fa-2x mb-2"></i>
-                                <p>No visa slots match your search criteria</p>
-                                <small>Try different keywords or clear the filters</small>
-                            </div>
-                        {% else %}
-                            <div class="text-center text-muted">
-                                <i class="fas fa-sync-alt fa-2x mb-3"></i>
-                                <p>Loading visa data...</p>
-                                <small>The system is fetching the latest information from checkvisaslots.com</small>
-                            </div>
-                        {% endif %}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -803,8 +856,12 @@
                                 <div class="col-md-6">
                                     <p class="text-muted mb-0">
                                         <i class="fas fa-clock me-1"></i>
-                                        <strong>Last updated:</strong> {{ visa_data.last_updated }}
+                                        <strong>Last updated:</strong> {{ visa_data.last_updated }} IST
                                     </p>
+                                    <small class="text-warning">
+                                        <i class="fas fa-info-circle me-1"></i>
+                                        Times adjusted for data source delay
+                                    </small>
                                 </div>
                                 <div class="col-md-6 text-md-end">
                                     <p class="text-muted mb-0">
@@ -816,17 +873,33 @@
 
                             <!-- Filter/Search -->
                             <div class="row mb-3">
-                                <div class="col-md-4">
-                                    <input type="text" class="form-control" id="searchFilter" placeholder="Search by visa type or location..." onkeyup="filterData()">
-                                </div>
                                 <div class="col-md-3">
+                                    <input type="text" class="form-control" id="searchFilter" placeholder="Search visa types..." onkeyup="filterData()">
+                                </div>
+                                <div class="col-md-2">
                                     <select class="form-select" id="subcategoryFilter" onchange="filterData()">
-                                        <option value="">All Subcategories</option>
+                                        <option value="">All Types</option>
                                         <option value="Regular">Regular</option>
                                         <option value="Dropbox">Dropbox</option>
                                         <option value="Emergency">Emergency</option>
                                         <option value="Expedited">Expedited</option>
                                     </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select" id="locationFilter" multiple onchange="filterData()" title="Select locations (Ctrl+Click for multiple)">
+                                        <option value="">All Locations</option>
+                                        <option value="CHENNAI">Chennai</option>
+                                        <option value="MUMBAI">Mumbai</option>
+                                        <option value="NEW DELHI">New Delhi</option>
+                                        <option value="HYDERABAD">Hyderabad</option>
+                                        <option value="KOLKATA">Kolkata</option>
+                                        <option value="CHENNAI VAC">Chennai VAC</option>
+                                        <option value="MUMBAI VAC">Mumbai VAC</option>
+                                        <option value="NEW DELHI VAC">New Delhi VAC</option>
+                                        <option value="HYDERABAD VAC">Hyderabad VAC</option>
+                                        <option value="KOLKATA VAC">Kolkata VAC</option>
+                                    </select>
+                                    <small class="text-muted">Hold Ctrl/Cmd to select multiple</small>
                                 </div>
                                 <div class="col-md-2">
                                     <select class="form-select" id="freshnessFilter" onchange="filterData()">
@@ -836,13 +909,26 @@
                                         <option value="old">Old (>1 hour)</option>
                                     </select>
                                 </div>
-                                <div class="col-md-3">
+                                <div class="col-md-2">
                                     <select class="form-select" id="sortBy" onchange="sortData()">
-                                        <option value="update_time">Sort by Update Time</option>
-                                        <option value="visa_type">Sort by Visa Type</option>
-                                        <option value="location">Sort by Location</option>
-                                        <option value="appointments">Sort by Appointments</option>
+                                        <option value="update_time">By Update</option>
+                                        <option value="visa_type">By Visa Type</option>
+                                        <option value="location">By Location</option>
+                                        <option value="appointments">By Slots</option>
                                     </select>
+                                </div>
+                            </div>
+
+                            <!-- Selected Locations Display -->
+                            <div class="row mb-2" id="selectedLocationsRow" style="display: none;">
+                                <div class="col-12">
+                                    <div class="d-flex flex-wrap align-items-center">
+                                        <small class="text-muted me-2">Filtering by locations:</small>
+                                        <div id="selectedLocationsBadges"></div>
+                                        <button type="button" class="btn btn-outline-secondary btn-sm ms-2" onclick="clearLocationFilter()">
+                                            <i class="fas fa-times"></i> Clear
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
 
@@ -1240,128 +1326,10 @@
             }
         });
 
-        // Filter visa data in the Current Visa Slots section
-        function filterVisaData() {
-            const searchTerm = document.getElementById('visaSearch').value.toLowerCase();
-            const categoryFilter = document.getElementById('categoryFilter').value;
-            const visaItems = document.querySelectorAll('.visa-item');
-            const noResults = document.getElementById('noResults');
-            let visibleCount = 0;
-
-            visaItems.forEach(item => {
-                const visaType = item.dataset.visaType.toLowerCase();
-                const location = item.dataset.location.toLowerCase();
-                
-                // Check search term match
-                const searchMatch = visaType.includes(searchTerm) || location.includes(searchTerm);
-                
-                // Check category filter match
-                let categoryMatch = true;
-                if (categoryFilter) {
-                    categoryMatch = visaType.includes(categoryFilter.toLowerCase());
-                }
-                
-                if (searchMatch && categoryMatch) {
-                    item.style.display = '';
-                    visibleCount++;
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-
-            // Update visible count
-            document.getElementById('visibleCount').textContent = visibleCount;
-            
-            // Show/hide no results message
-            if (visibleCount === 0) {
-                noResults.style.display = 'block';
-            } else {
-                noResults.style.display = 'none';
-            }
-        }
-
-        // Quick filter function for visa categories
-        function quickFilter(category) {
-            const searchInput = document.getElementById('visaSearch');
-            const categorySelect = document.getElementById('categoryFilter');
-            
-            // Update active button styling
-            document.querySelectorAll('.btn-group .btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            event.target.classList.add('active');
-            
-            if (category === 'all') {
-                searchInput.value = '';
-                categorySelect.value = '';
-            } else if (category === 'Dropbox') {
-                searchInput.value = '';
-                categorySelect.value = 'Dropbox';
-            } else {
-                searchInput.value = category;
-                categorySelect.value = '';
-            }
-            
-            filterVisaData();
-        }
-
-        // Show/hide visa details when clicked
-        function showVisaDetails(element) {
-            const details = element.querySelector('.visa-details');
-            const isExpanded = element.classList.contains('expanded');
-            
-            // Close all other expanded items
-            document.querySelectorAll('.visa-item.expanded').forEach(item => {
-                if (item !== element) {
-                    item.classList.remove('expanded');
-                    item.querySelector('.visa-details').style.display = 'none';
-                }
-            });
-            
-            if (isExpanded) {
-                element.classList.remove('expanded');
-                details.style.display = 'none';
-            } else {
-                element.classList.add('expanded');
-                details.style.display = 'block';
-            }
-        }
-
-        // Quick subscribe function
-        function quickSubscribe(visaType, location) {
-            // Pre-fill the subscription form
-            const emailInput = document.getElementById('email');
-            if (!emailInput.value) {
-                alert('Please enter your email address in the subscription form first!');
-                emailInput.focus();
-                return;
-            }
-            
-            // Find and check the corresponding visa type checkbox
-            const visaCheckboxes = document.querySelectorAll('input[name="visa_types"]');
-            visaCheckboxes.forEach(checkbox => {
-                if (checkbox.value === visaType) {
-                    checkbox.checked = true;
-                }
-            });
-            
-            // Find and check the corresponding location checkbox
-            const locationCheckboxes = document.querySelectorAll('input[name="locations"]');
-            locationCheckboxes.forEach(checkbox => {
-                if (checkbox.value === location) {
-                    checkbox.checked = true;
-                }
-            });
-            
-            // Scroll to subscription form
-            document.querySelector('.card-header h4').scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
-            
-            // Show success message
-            alert(`Pre-filled subscription for ${visaType} in ${location}!\nReview and click "Subscribe to Alerts" to confirm.`);
-        }
+        // Auto-refresh functionality
+        setInterval(function() {
+            location.reload();
+        }, 300000); // Refresh every 5 minutes
     </script>
 </body>
 </html>

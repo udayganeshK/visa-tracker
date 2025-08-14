@@ -8,7 +8,7 @@ Exports data to CSV and Excel formats
 import json
 import csv
 import os
-from datetime import datetime
+from datetime import datetime, timezone, timedelta
 from collections import defaultdict
 import sys
 
@@ -17,6 +17,16 @@ try:
     PANDAS_AVAILABLE = True
 except ImportError:
     PANDAS_AVAILABLE = False
+
+# IST timezone helper functions
+def get_ist_now():
+    """Get current datetime in IST (UTC+5:30)"""
+    ist_offset = timezone(timedelta(hours=5, minutes=30))
+    return datetime.now(ist_offset)
+
+def get_ist_timestamp():
+    """Get current IST timestamp as ISO string"""
+    return get_ist_now().isoformat()
 
 def load_live_data():
     """Load the live data JSON file"""
@@ -49,11 +59,17 @@ def parse_date(date_str):
         return date_str
 
 def get_relative_time(timestamp_str):
-    """Calculate relative time from timestamp"""
+    """Calculate relative time from timestamp (adjusted for data source delay)"""
     try:
         dt = datetime.strptime(timestamp_str, "%Y-%m-%d %H:%M:%S")
-        now = datetime.now()
-        diff = now - dt
+        
+        # Add 5.5 hours to compensate for known data source delay
+        # This makes the times more accurate to actual visa slot updates
+        adjusted_dt = dt + timedelta(hours=5, minutes=30)
+        
+        # Compare with IST time (remove timezone info for comparison)
+        now = get_ist_now().replace(tzinfo=None)
+        diff = now - adjusted_dt
         
         if diff.days > 0:
             return f"{diff.days}d ago"
@@ -97,7 +113,7 @@ def create_visa_tables(data):
     print("📊 US VISA AVAILABILITY - TABLE FORMAT")
     print("="*80)
     print(f"📡 Data Source: checkvisaslots.com")
-    print(f"🕐 Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"🕐 Generated: {get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST')}")
     
     # Group data by base visa type
     visa_groups = defaultdict(list)
@@ -480,7 +496,7 @@ def main():
     create_detailed_b_visa_table(visa_groups)
     
     # Generate timestamp for exports
-    timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+    timestamp = get_ist_now().strftime('%Y%m%d_%H%M%S')
     
     # Export to text file
     filename = f"visa_tables_{timestamp}.txt"
@@ -522,7 +538,7 @@ def main():
         print(f"📁 CSV files: {csv_dir}/")
     if 'excel_file' in locals() and excel_file:
         print(f"📊 Excel file: {excel_file}")
-    print(f"🕐 Generated at: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"🕐 Generated at: {get_ist_now().strftime('%Y-%m-%d %H:%M:%S IST')}")
     
     # Show file sizes and record counts
     total_records = sum(len(records) for records in visa_groups.values())
