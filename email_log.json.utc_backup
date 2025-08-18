@@ -1,0 +1,31 @@
+[
+  {
+    "timestamp": "2025-08-14T13:03:20.541875",
+    "email": "uday.gnsh@gmail.com",
+    "alerts_count": 2,
+    "success": false,
+    "visa_types": [
+      "B2 (Dropbox)",
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T13:04:49.948388",
+    "email": "uday.gnsh@gmail.com",
+    "alerts_count": 2,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)",
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T13:10:18.432390",
+    "email": "srkanteti@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "Confirmation Email"
+    ]
+  }
+]

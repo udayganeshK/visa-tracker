@@ -1,0 +1,719 @@
+
+================================================================================
+📊 US VISA AVAILABILITY - TABLE FORMAT
+================================================================================
+📡 Data Source: checkvisaslots.com
+🕐 Generated: 2025-08-14 12:10:29
+
+============================================================
+🎯 B1 VISA AVAILABILITY
+============================================================
+📍 Locations: 10 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 155 | 🎫 Total Appointments: 256
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      23 Sep, 25      1        1        10h ago     
+CHENNAI VAC     Regular      12 May, 26      1        1        5h ago      
+HYDERABAD       Regular      02 Sep, 25      1        1        19h ago     
+HYDERABAD VAC   Regular      01 Jun, 26      11       1        5h ago      
+KOLKATA         Regular      03 Sep, 25      1        1        1d ago      
+KOLKATA VAC     Regular      23 Jun, 26      15       7        5h ago      
+MUMBAI          Regular      05 Sep, 25      1        0        6h ago      
+MUMBAI VAC      Regular      25 Jun, 26      1        1        5h ago      
+NEW DELHI       Regular      25 Aug, 25      4        1        11h ago     
+NEW DELHI VAC   Dropbox      04 Aug, 25      92       236      19d ago     
+NEW DELHI VAC   Regular      25 Aug, 25      27       6        5h ago      
+
+============================================================
+🎯 B1/B2 VISA AVAILABILITY
+============================================================
+📍 Locations: 10 | 📋 Subtypes: Dropbox, Emergency, Regular
+📅 Total Dates: 168 | 🎫 Total Appointments: 437
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      21 Aug, 25      1        2        5h ago      
+CHENNAI VAC     Regular      12 May, 26      1        1        5h ago      
+HYDERABAD       Regular      30 Sep, 25      1        1        6h ago      
+HYDERABAD VAC   Regular      02 Jun, 26      10       2        5h ago      
+KOLKATA         Regular      21 Aug, 25      3        1        7h ago      
+KOLKATA VAC     Regular      02 Jun, 26      27       0        5h ago      
+MUMBAI          Regular      22 Aug, 25      1        1        6h ago      
+MUMBAI VAC      Dropbox      18 Jun, 26      1        1        2d ago      
+MUMBAI VAC      Regular      25 Jun, 26      1        1        5h ago      
+NEW DELHI       Regular      21 Aug, 25      3        2        6h ago      
+NEW DELHI VAC   Dropbox      25 Aug, 25      55       234      2d ago      
+NEW DELHI VAC   Emergency    01 Oct, 25      49       188      28d ago     
+NEW DELHI VAC   Regular      25 Aug, 25      15       3        5h ago      
+
+============================================================
+🎯 B2 VISA AVAILABILITY
+============================================================
+📍 Locations: 10 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 75 | 🎫 Total Appointments: 421
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      21 Aug, 25      1        2        7h ago      
+CHENNAI VAC     Regular      12 May, 26      1        1        5h ago      
+HYDERABAD       Regular      02 Sep, 25      1        0        7h ago      
+HYDERABAD VAC   Regular      29 Jul, 26      2        162      5h ago      
+KOLKATA         Regular      26 Aug, 25      1        3        1d ago      
+KOLKATA VAC     Regular      10 Aug, 26      9        4        5h ago      
+MUMBAI          Regular      05 Sep, 25      1        2        6h ago      
+MUMBAI VAC      Dropbox      04 Jun, 26      1        1        9h ago      
+MUMBAI VAC      Regular      25 Jun, 26      1        1        5h ago      
+NEW DELHI       Regular      21 Aug, 25      4        11       7h ago      
+NEW DELHI VAC   Dropbox      25 Aug, 25      40       49       9h ago      
+NEW DELHI VAC   Regular      12 Aug, 26      13       185      5h ago      
+
+============================================================
+🎯 C-1 VISA AVAILABILITY
+============================================================
+📍 Locations: 5 | 📋 Subtypes: Regular
+📅 Total Dates: 92 | 🎫 Total Appointments: 288
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      01 Aug, 25      8        196      24d ago     
+CHENNAI VAC     Regular      23 Jul, 25      28       68       24d ago     
+HYDERABAD VAC   Regular      22 Jul, 25      35       12       24d ago     
+MUMBAI VAC      Regular      07 Aug, 26      11       9        24d ago     
+NEW DELHI VAC   Regular      06 Aug, 26      10       3        24d ago     
+
+============================================================
+🎯 C1/D VISA AVAILABILITY
+============================================================
+📍 Locations: 6 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 196 | 🎫 Total Appointments: 301
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      04 Sep, 25      3        9        1d ago      
+CHENNAI VAC     Regular      29 Aug, 25      24       9        19h ago     
+MUMBAI          Regular      04 Sep, 25      5        175      2d ago      
+MUMBAI VAC      Regular      20 Aug, 25      41       29       19h ago     
+NEW DELHI       Regular      07 Oct, 25      5        6        4d ago      
+NEW DELHI VAC   Dropbox      25 Jul, 25      97       65       21d ago     
+NEW DELHI VAC   Regular      16 Sep, 25      21       8        19h ago     
+
+============================================================
+🎯 CR1 VISA AVAILABILITY
+============================================================
+📍 Locations: 2 | 📋 Subtypes: Regular
+📅 Total Dates: 22 | 🎫 Total Appointments: 72
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Regular      07 Sep, 25      6        43       3d ago      
+MUMBAI VAC      Regular      13 Aug, 25      16       29       2d ago      
+
+============================================================
+🎯 E2 VISA AVAILABILITY
+============================================================
+📍 Locations: 4 | 📋 Subtypes: Regular
+📅 Total Dates: 63 | 🎫 Total Appointments: 442
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Regular      12 May, 26      1        1        5h ago      
+HYDERABAD VAC   Regular      22 Jun, 26      9        1        7h ago      
+KOLKATA VAC     Regular      22 Jun, 26      16       5        7h ago      
+NEW DELHI VAC   Regular      27 Aug, 25      37       435      5h ago      
+
+============================================================
+🎯 Expedited Cases VISA AVAILABILITY
+============================================================
+📍 Locations: 3 | 📋 Subtypes: Regular
+📅 Total Dates: 12 | 🎫 Total Appointments: 12
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Regular      17 Aug, 25      1        4        1d ago      
+KOLKATA VAC     Regular      24 Aug, 25      1        3        1d ago      
+MUMBAI VAC      Regular      14 Aug, 25      10       5        1d ago      
+
+============================================================
+🎯 F-1 VISA AVAILABILITY
+============================================================
+📍 Locations: 9 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 13 | 🎫 Total Appointments: 14
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      21 Aug, 25      1        1        6h ago      
+CHENNAI VAC     Dropbox      14 Aug, 25      1        1        20d ago     
+CHENNAI VAC     Regular      21 Aug, 25      2        0        7h ago      
+HYDERABAD       Regular      21 Aug, 25      1        1        6h ago      
+HYDERABAD VAC   Regular      19 Aug, 25      1        1        6h ago      
+KOLKATA VAC     Regular      18 Aug, 25      3        7        10d ago     
+MUMBAI          Regular      25 Aug, 25      1        0        2d ago      
+MUMBAI VAC      Regular      19 Aug, 25      1        1        6h ago      
+NEW DELHI       Regular      29 Aug, 25      1        0        2d ago      
+NEW DELHI VAC   Regular      17 Aug, 25      1        2        6h ago      
+
+============================================================
+🎯 F-2 VISA AVAILABILITY
+============================================================
+📍 Locations: 8 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 21 | 🎫 Total Appointments: 31
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      21 Aug, 25      2        1        5d ago      
+CHENNAI VAC     Dropbox      07 Aug, 25      4        4        20d ago     
+CHENNAI VAC     Regular      21 Aug, 25      2        0        19h ago     
+HYDERABAD       Regular      29 Aug, 25      1        1        4d ago      
+HYDERABAD VAC   Regular      18 Aug, 25      6        3        1d ago      
+MUMBAI          Regular      12 Aug, 25      1        1        9d ago      
+MUMBAI VAC      Regular      19 Aug, 25      1        0        3d ago      
+NEW DELHI       Regular      28 Aug, 25      2        21       10d ago     
+NEW DELHI VAC   Regular      14 Aug, 25      2        0        1d ago      
+
+============================================================
+🎯 F21 VISA AVAILABILITY
+============================================================
+📍 Locations: 1 | 📋 Subtypes: Regular
+📅 Total Dates: 29 | 🎫 Total Appointments: 24
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+MUMBAI VAC      Regular      21 Jul, 25      29       24       27d ago     
+
+============================================================
+🎯 F31 VISA AVAILABILITY
+============================================================
+📍 Locations: 4 | 📋 Subtypes: Dropbox, Emergency, Regular
+📅 Total Dates: 52 | 🎫 Total Appointments: 121
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Dropbox      03 Aug, 25      4        35       18d ago     
+CHENNAI VAC     Regular      10 Aug, 25      2        8        6d ago      
+MUMBAI IV       Regular      21 Aug, 25      1        9        15d ago     
+MUMBAI VAC      Emergency    21 Jul, 25      29       5        27d ago     
+MUMBAI VAC      Regular      13 Aug, 25      15       61       2d ago      
+NEW DELHI VAC   Regular      24 Aug, 25      1        3        8d ago      
+
+============================================================
+🎯 F41 VISA AVAILABILITY
+============================================================
+📍 Locations: 2 | 📋 Subtypes: Regular
+📅 Total Dates: 17 | 🎫 Total Appointments: 54
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+HYDERABAD VAC   Regular      24 Jul, 25      2        2        22d ago     
+MUMBAI VAC      Regular      13 Aug, 25      15       52       2d ago      
+
+============================================================
+🎯 F41. VISA AVAILABILITY
+============================================================
+📍 Locations: 5 | 📋 Subtypes: Regular
+📅 Total Dates: 28 | 🎫 Total Appointments: 35
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Regular      17 Aug, 25      1        5        13h ago     
+KOLKATA VAC     Regular      24 Aug, 25      2        3        13h ago     
+MUMBAI IV       Regular      26 Aug, 25      6        8        13h ago     
+MUMBAI VAC      Regular      17 Aug, 25      16       2        13h ago     
+NEW DELHI VAC   Regular      10 Aug, 25      3        17       7d ago      
+
+============================================================
+🎯 H-1B VISA AVAILABILITY
+============================================================
+📍 Locations: 10 | 📋 Subtypes: Dropbox, Emergency, Regular
+📅 Total Dates: 139 | 🎫 Total Appointments: 381
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      03 Oct, 25      6        211      5h ago      
+CHENNAI VAC     Dropbox      21 Aug, 25      38       1        7h ago      
+CHENNAI VAC     Emergency    29 Jul, 25      12       58       17d ago     
+HYDERABAD       Regular      29 Sep, 25      4        31       5h ago      
+HYDERABAD VAC   Emergency    07 Aug, 25      32       48       17d ago     
+KOLKATA         Regular      07 Oct, 25      7        0        8d ago      
+KOLKATA VAC     Regular      11 Sep, 25      5        3        14h ago     
+MUMBAI          Regular      25 Jul, 25      1        2        21d ago     
+MUMBAI VAC      Emergency    13 Aug, 25      10       21       17d ago     
+MUMBAI VAC      Regular      22 Aug, 25      22       2        5h ago      
+NEW DELHI       Regular      22 Oct, 25      1        2        10d ago     
+NEW DELHI VAC   Regular      27 Oct, 25      1        2        5h ago      
+
+============================================================
+🎯 H-2A VISA AVAILABILITY
+============================================================
+📍 Locations: 4 | 📋 Subtypes: Regular
+📅 Total Dates: 42 | 🎫 Total Appointments: 514
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      03 Oct, 25      13       271      9h ago      
+HYDERABAD       Regular      01 Oct, 25      5        180      9h ago      
+MUMBAI VAC      Regular      21 Aug, 25      23       61       9h ago      
+NEW DELHI VAC   Regular      28 Oct, 25      1        2        3d ago      
+
+============================================================
+🎯 H-4 VISA AVAILABILITY
+============================================================
+📍 Locations: 8 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 80 | 🎫 Total Appointments: 102
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      08 Sep, 25      4        2        7h ago      
+CHENNAI VAC     Dropbox      13 Aug, 25      42       11       3d ago      
+HYDERABAD       Regular      12 Sep, 25      1        3        6h ago      
+KOLKATA         Regular      19 Sep, 25      3        76       4d ago      
+KOLKATA VAC     Regular      14 Aug, 25      1        2        1d ago      
+MUMBAI VAC      Regular      22 Aug, 25      22       1        6h ago      
+NEW DELHI       Regular      03 Sep, 25      6        6        8d ago      
+NEW DELHI VAC   Regular      27 Oct, 25      1        1        6h ago      
+
+============================================================
+🎯 I VISA AVAILABILITY
+============================================================
+📍 Locations: 4 | 📋 Subtypes: Regular
+📅 Total Dates: 94 | 🎫 Total Appointments: 193
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+MUMBAI          Regular      12 Aug, 25      1        1        16d ago     
+MUMBAI VAC      Regular      23 Sep, 25      6        1        17d ago     
+NEW DELHI       Regular      18 Aug, 25      2        1        16d ago     
+NEW DELHI VAC   Regular      06 Aug, 25      85       190      16d ago     
+
+============================================================
+🎯 I5 VISA AVAILABILITY
+============================================================
+📍 Locations: 1 | 📋 Subtypes: Regular
+📅 Total Dates: 17 | 🎫 Total Appointments: 17
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+MUMBAI VAC      Regular      04 Aug, 25      17       17       13d ago     
+
+============================================================
+🎯 I52 VISA AVAILABILITY
+============================================================
+📍 Locations: 1 | 📋 Subtypes: Regular
+📅 Total Dates: 17 | 🎫 Total Appointments: 16
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+MUMBAI VAC      Regular      04 Aug, 25      17       16       13d ago     
+
+============================================================
+🎯 I53 VISA AVAILABILITY
+============================================================
+📍 Locations: 1 | 📋 Subtypes: Regular
+📅 Total Dates: 17 | 🎫 Total Appointments: 15
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+MUMBAI VAC      Regular      04 Aug, 25      17       15       13d ago     
+
+============================================================
+🎯 IR1 VISA AVAILABILITY
+============================================================
+📍 Locations: 4 | 📋 Subtypes: Regular
+📅 Total Dates: 26 | 🎫 Total Appointments: 68
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Regular      07 Sep, 25      6        32       2d ago      
+HYDERABAD VAC   Regular      18 Jul, 25      5        1        28d ago     
+MUMBAI VAC      Regular      13 Aug, 25      14       30       2d ago      
+NEW DELHI VAC   Regular      31 Aug, 25      1        5        29d ago     
+
+============================================================
+🎯 IR2 VISA AVAILABILITY
+============================================================
+📍 Locations: 2 | 📋 Subtypes: Regular
+📅 Total Dates: 22 | 🎫 Total Appointments: 13
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+MUMBAI IV       Regular      05 Aug, 25      6        1        15d ago     
+MUMBAI VAC      Regular      31 Jul, 25      16       12       15d ago     
+
+============================================================
+🎯 IR5 VISA AVAILABILITY
+============================================================
+📍 Locations: 5 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 79 | 🎫 Total Appointments: 203
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Dropbox      20 Jul, 25      6        41       29d ago     
+CHENNAI VAC     Regular      17 Aug, 25      8        10       1d ago      
+HYDERABAD VAC   Dropbox      21 Jul, 25      4        2        27d ago     
+MUMBAI IV       Regular      26 Aug, 25      6        1        23h ago     
+MUMBAI VAC      Dropbox      21 Jul, 25      29       68       27d ago     
+MUMBAI VAC      Regular      14 Aug, 25      25       74       2d ago      
+NEW DELHI VAC   Dropbox      31 Aug, 25      1        7        29d ago     
+
+============================================================
+🎯 IR5. VISA AVAILABILITY
+============================================================
+📍 Locations: 5 | 📋 Subtypes: Regular
+📅 Total Dates: 24 | 🎫 Total Appointments: 38
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Regular      10 Aug, 25      3        4        7d ago      
+HYDERABAD VAC   Regular      29 Jul, 25      3        10       17d ago     
+MUMBAI IV       Regular      22 Aug, 25      3        3        7d ago      
+MUMBAI VAC      Regular      08 Aug, 25      12       4        7d ago      
+NEW DELHI VAC   Regular      10 Aug, 25      3        17       7d ago      
+
+============================================================
+🎯 J-1 VISA AVAILABILITY
+============================================================
+📍 Locations: 8 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 10 | 🎫 Total Appointments: 18
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      19 Aug, 25      1        1        11d ago     
+CHENNAI VAC     Dropbox      04 Aug, 25      1        1        18d ago     
+CHENNAI VAC     Regular      07 Aug, 25      1        1        12d ago     
+HYDERABAD       Regular      26 Aug, 25      1        1        10h ago     
+HYDERABAD VAC   Regular      12 Aug, 25      1        1        11d ago     
+MUMBAI          Regular      26 Aug, 25      1        1        10h ago     
+MUMBAI VAC      Regular      29 Jul, 25      1        4        17d ago     
+NEW DELHI       Regular      25 Aug, 25      2        2        10h ago     
+NEW DELHI VAC   Regular      10 Sep, 25      1        6        8h ago      
+
+============================================================
+🎯 J-1 Physicians VISA AVAILABILITY
+============================================================
+📍 Locations: 8 | 📋 Subtypes: Regular
+📅 Total Dates: 43 | 🎫 Total Appointments: 28
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      07 Aug, 25      1        1        12d ago     
+CHENNAI VAC     Regular      18 Aug, 25      6        3        13h ago     
+HYDERABAD       Regular      25 Aug, 25      4        4        5d ago      
+HYDERABAD VAC   Regular      18 Aug, 25      5        3        13h ago     
+MUMBAI          Regular      28 Aug, 25      2        5        5d ago      
+MUMBAI VAC      Regular      18 Aug, 25      7        4        13h ago     
+NEW DELHI       Regular      25 Aug, 25      12       3        5d ago      
+NEW DELHI VAC   Regular      31 Jul, 25      6        5        15d ago     
+
+============================================================
+🎯 J-2 VISA AVAILABILITY
+============================================================
+📍 Locations: 7 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 19 | 🎫 Total Appointments: 26
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      22 Aug, 25      1        4        12d ago     
+CHENNAI VAC     Dropbox      04 Aug, 25      5        5        20d ago     
+HYDERABAD       Regular      21 Aug, 25      2        5        18d ago     
+HYDERABAD VAC   Regular      14 Aug, 25      1        1        13d ago     
+MUMBAI          Regular      21 Aug, 25      6        4        12d ago     
+NEW DELHI       Regular      22 Sep, 25      3        1        12d ago     
+NEW DELHI VAC   Regular      10 Sep, 25      1        6        8h ago      
+
+============================================================
+🎯 K1 VISA AVAILABILITY
+============================================================
+📍 Locations: 3 | 📋 Subtypes: Regular
+📅 Total Dates: 22 | 🎫 Total Appointments: 17
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+HYDERABAD VAC   Regular      21 Jul, 25      9        10       25d ago     
+MUMBAI IV       Regular      04 Aug, 25      4        1        25d ago     
+MUMBAI VAC      Regular      21 Jul, 25      9        6        26d ago     
+
+============================================================
+🎯 L-1 VISA AVAILABILITY
+============================================================
+📍 Locations: 6 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 162 | 🎫 Total Appointments: 587
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      15 Sep, 25      9        110      6h ago      
+CHENNAI         Regular      15 Sep, 25      11       77       6h ago      
+CHENNAI VAC     Dropbox      19 Aug, 25      38       369      10h ago     
+HYDERABAD       Regular      12 Sep, 25      10       3        6h ago      
+KOLKATA VAC     Regular      25 Jul, 25      6        10       21d ago     
+MUMBAI VAC      Regular      02 Sep, 25      21       9        10h ago     
+MUMBAI VAC      Regular      20 Aug, 25      31       3        1d ago      
+NEW DELHI VAC   Regular      27 Oct, 25      2        3        15h ago     
+NEW DELHI VAC   Regular      22 Aug, 25      34       3        1d ago      
+
+============================================================
+🎯 L-2 VISA AVAILABILITY
+============================================================
+📍 Locations: 6 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 92 | 🎫 Total Appointments: 460
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      06 Oct, 25      15       110      1d ago      
+CHENNAI         Regular      06 Oct, 25      15       98       14h ago     
+CHENNAI VAC     Dropbox      25 Jul, 25      1        4        21d ago     
+CHENNAI VAC     Dropbox      31 Jul, 25      1        3        19d ago     
+HYDERABAD       Regular      09 Oct, 25      5        180      1d ago      
+HYDERABAD       Regular      23 Oct, 25      5        30       3d ago      
+KOLKATA VAC     Regular      28 Jul, 25      1        1        22d ago     
+MUMBAI VAC      Regular      20 Aug, 25      24       3        1d ago      
+MUMBAI VAC      Regular      19 Aug, 25      22       25       14h ago     
+NEW DELHI VAC   Regular      28 Oct, 25      1        4        3d ago      
+NEW DELHI VAC   Regular      27 Oct, 25      2        2        3d ago      
+
+============================================================
+🎯 M-1 VISA AVAILABILITY
+============================================================
+📍 Locations: 8 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 23 | 🎫 Total Appointments: 61
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      28 Aug, 25      1        1        7d ago      
+CHENNAI VAC     Dropbox      01 Aug, 25      9        10       28d ago     
+CHENNAI VAC     Regular      19 Aug, 25      1        1        1d ago      
+HYDERABAD       Regular      25 Aug, 25      1        1        7d ago      
+HYDERABAD VAC   Regular      19 Aug, 25      1        11       1d ago      
+MUMBAI          Regular      29 Aug, 25      1        14       10d ago     
+MUMBAI VAC      Regular      13 Aug, 25      1        0        10d ago     
+NEW DELHI       Regular      21 Aug, 25      7        23       12d ago     
+NEW DELHI VAC   Regular      12 Aug, 25      1        0        11d ago     
+
+============================================================
+🎯 O-1 VISA AVAILABILITY
+============================================================
+📍 Locations: 8 | 📋 Subtypes: Dropbox, Regular
+📅 Total Dates: 133 | 🎫 Total Appointments: 53
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      27 Oct, 25      4        10       22h ago     
+CHENNAI VAC     Dropbox      06 Aug, 25      40       3        10d ago     
+HYDERABAD       Regular      22 Aug, 25      4        8        10d ago     
+KOLKATA         Regular      28 Aug, 25      5        1        10d ago     
+KOLKATA VAC     Regular      17 Aug, 25      34       10       22h ago     
+MUMBAI          Regular      27 Oct, 25      4        9        22h ago     
+MUMBAI VAC      Regular      26 Aug, 25      38       10       22h ago     
+NEW DELHI       Regular      25 Aug, 25      4        2        10d ago     
+
+============================================================
+🎯 P-3 VISA AVAILABILITY
+============================================================
+📍 Locations: 7 | 📋 Subtypes: Regular
+📅 Total Dates: 67 | 🎫 Total Appointments: 26
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      02 Sep, 25      7        1        2d ago      
+HYDERABAD       Regular      02 Sep, 25      3        6        2d ago      
+KOLKATA         Regular      28 Aug, 25      4        1        8d ago      
+KOLKATA VAC     Regular      10 Aug, 25      15       5        7d ago      
+MUMBAI          Regular      28 Aug, 25      2        1        2d ago      
+MUMBAI VAC      Regular      28 Aug, 25      35       9        2d ago      
+NEW DELHI       Regular      11 Sep, 25      1        3        8d ago      
+
+============================================================
+🎯 R-1 VISA AVAILABILITY
+============================================================
+📍 Locations: 10 | 📋 Subtypes: Regular
+📅 Total Dates: 105 | 🎫 Total Appointments: 90
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      17 Sep, 25      14       8        1d ago      
+CHENNAI VAC     Regular      25 Sep, 25      10       52       21h ago     
+HYDERABAD       Regular      02 Sep, 25      3        1        21h ago     
+HYDERABAD VAC   Regular      22 Sep, 25      10       1        21h ago     
+KOLKATA         Regular      21 Aug, 25      7        10       1d ago      
+KOLKATA VAC     Regular      04 Sep, 25      24       1        21h ago     
+MUMBAI          Regular      09 Sep, 25      1        4        1d ago      
+MUMBAI VAC      Regular      25 Sep, 25      4        1        1d ago      
+NEW DELHI       Regular      11 Sep, 25      1        2        1d ago      
+NEW DELHI VAC   Regular      25 Aug, 25      31       10       21h ago     
+
+============================================================
+🎯 R-2 VISA AVAILABILITY
+============================================================
+📍 Locations: 8 | 📋 Subtypes: Regular
+📅 Total Dates: 57 | 🎫 Total Appointments: 52
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      21 Aug, 25      4        1        9h ago      
+HYDERABAD       Regular      03 Sep, 25      2        10       9h ago      
+HYDERABAD VAC   Regular      16 Sep, 25      8        2        11h ago     
+KOLKATA         Regular      21 Aug, 25      6        10       10h ago     
+MUMBAI          Regular      19 Aug, 25      4        2        13d ago     
+MUMBAI VAC      Regular      20 Aug, 25      4        1        6d ago      
+NEW DELHI       Regular      25 Aug, 25      1        3        10d ago     
+NEW DELHI VAC   Regular      25 Aug, 25      28       23       11h ago     
+
+============================================================
+🎯 SB1-Returning Resident VISA AVAILABILITY
+============================================================
+📍 Locations: 1 | 📋 Subtypes: Regular
+📅 Total Dates: 6 | 🎫 Total Appointments: 2
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+MUMBAI IV       Regular      18 Aug, 25      6        2        2d ago      
+
+============================================================
+🎯 TD VISA AVAILABILITY
+============================================================
+📍 Locations: 7 | 📋 Subtypes: Regular
+📅 Total Dates: 46 | 🎫 Total Appointments: 337
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      04 Sep, 25      1        1        3d ago      
+CHENNAI VAC     Regular      22 Jul, 26      3        1        2d ago      
+HYDERABAD VAC   Regular      28 Jul, 26      3        68       1d ago      
+KOLKATA VAC     Regular      10 Aug, 26      9        13       1d ago      
+MUMBAI          Regular      26 Aug, 25      1        36       3d ago      
+MUMBAI VAC      Regular      10 Aug, 26      9        13       1d ago      
+NEW DELHI VAC   Regular      26 Aug, 25      20       205      1d ago      
+
+============================================================
+🎯 U-1 VISA AVAILABILITY
+============================================================
+📍 Locations: 4 | 📋 Subtypes: Regular
+📅 Total Dates: 90 | 🎫 Total Appointments: 1045
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI         Regular      25 Aug, 25      5        548      12d ago     
+CHENNAI VAC     Regular      17 Oct, 25      8        2        12d ago     
+HYDERABAD VAC   Regular      06 Oct, 25      23       126      12d ago     
+NEW DELHI VAC   Regular      05 Aug, 25      54       369      12d ago     
+
+============================================================
+🎯 U-3 VISA AVAILABILITY
+============================================================
+📍 Locations: 7 | 📋 Subtypes: Regular
+📅 Total Dates: 64 | 🎫 Total Appointments: 458
+
+Location        Type         Earliest Date   Dates    Appts    Last Seen   
+--------------------------------------------------------------------------------
+CHENNAI VAC     Regular      24 Aug, 26      1        2        2d ago      
+HYDERABAD VAC   Regular      07 Jul, 26      5        1        6h ago      
+KOLKATA         Regular      09 Sep, 25      1        2        2d ago      
+KOLKATA VAC     Regular      21 Sep, 25      21       36       6h ago      
+MUMBAI          Regular      03 Sep, 25      1        1        2d ago      
+MUMBAI VAC      Regular      08 Jul, 26      1        1        2d ago      
+NEW DELHI VAC   Regular      27 Aug, 25      34       415      6h ago      
+
+================================================================================
+📋 VISA TYPES SUMMARY
+================================================================================
+Visa Type       Locations    Subtypes             Total Dates  Total Appts 
+--------------------------------------------------------------------------------
+C1/D            6            Dropbox, Regular     196          301         
+B1/B2           10           Dropbox, Emergency,  168          437         
+L-1             6            Dropbox, Regular     162          587         
+B1              10           Dropbox, Regular     155          256         
+H-1B            10           Dropbox, Emergency,  139          381         
+O-1             8            Dropbox, Regular     133          53          
+R-1             10           Regular              105          90          
+I               4            Regular              94           193         
+C-1             5            Regular              92           288         
+L-2             6            Dropbox, Regular     92           460         
+U-1             4            Regular              90           1045        
+H-4             8            Dropbox, Regular     80           102         
+IR5             5            Dropbox, Regular     79           203         
+B2              10           Dropbox, Regular     75           421         
+P-3             7            Regular              67           26          
+U-3             7            Regular              64           458         
+E2              4            Regular              63           442         
+R-2             8            Regular              57           52          
+F31             4            Dropbox, Emergency,  52           121         
+TD              7            Regular              46           337         
+J-1 Physicians  8            Regular              43           28          
+H-2A            4            Regular              42           514         
+F21             1            Regular              29           24          
+F41.            5            Regular              28           35          
+IR1             4            Regular              26           68          
+IR5.            5            Regular              24           38          
+M-1             8            Dropbox, Regular     23           61          
+CR1             2            Regular              22           72          
+K1              3            Regular              22           17          
+IR2             2            Regular              22           13          
+F-2             8            Dropbox, Regular     21           31          
+J-2             7            Dropbox, Regular     19           26          
+F41             2            Regular              17           54          
+I53             1            Regular              17           15          
+I5              1            Regular              17           17          
+I52             1            Regular              17           16          
+F-1             9            Dropbox, Regular     13           14          
+Expedited Cases 3            Regular              12           12          
+J-1             8            Dropbox, Regular     10           18          
+SB1-Returning Resident 1            Regular              6            2           
+
+================================================================================
+🏢 LOCATION SUMMARY
+================================================================================
+Location             Visa Types   Total Dates  Total Appts 
+--------------------------------------------------------------------------------
+NEW DELHI VAC        28           771          2709        
+MUMBAI VAC           36           626          633         
+CHENNAI VAC          28           319          795         
+KOLKATA VAC          16           189          110         
+HYDERABAD VAC        22           186          469         
+CHENNAI              22           129          1667        
+NEW DELHI            17           59           89          
+HYDERABAD            18           55           467         
+KOLKATA              10           38           105         
+MUMBAI               18           35           259         
+MUMBAI IV            7            32           25          
+
+====================================================================================================
+🎯 B1/B2 BUSINESS & TOURISM VISAS - DETAILED VIEW
+====================================================================================================
+Location           Visa Type    Subtype    Earliest Date   Dates  Appts  Last Seen   
+----------------------------------------------------------------------------------------------------
+CHENNAI            B1           Regular    23 Sep, 25      1      1      10h ago     
+CHENNAI            B1/B2        Regular    21 Aug, 25      1      2      5h ago      
+CHENNAI            B2           Regular    21 Aug, 25      1      2      7h ago      
+CHENNAI VAC        B1           Regular    12 May, 26      1      1      5h ago      
+CHENNAI VAC        B1/B2        Regular    12 May, 26      1      1      5h ago      
+CHENNAI VAC        B2           Regular    12 May, 26      1      1      5h ago      
+HYDERABAD          B1           Regular    02 Sep, 25      1      1      19h ago     
+HYDERABAD          B1/B2        Regular    30 Sep, 25      1      1      6h ago      
+HYDERABAD          B2           Regular    02 Sep, 25      1      0      7h ago      
+HYDERABAD VAC      B1           Regular    01 Jun, 26      11     1      5h ago      
+HYDERABAD VAC      B1/B2        Regular    02 Jun, 26      10     2      5h ago      
+HYDERABAD VAC      B2           Regular    29 Jul, 26      2      162    5h ago      
+KOLKATA            B1           Regular    03 Sep, 25      1      1      1d ago      
+KOLKATA            B1/B2        Regular    21 Aug, 25      3      1      7h ago      
+KOLKATA            B2           Regular    26 Aug, 25      1      3      1d ago      
+KOLKATA VAC        B1           Regular    23 Jun, 26      15     7      5h ago      
+KOLKATA VAC        B1/B2        Regular    02 Jun, 26      27     0      5h ago      
+KOLKATA VAC        B2           Regular    10 Aug, 26      9      4      5h ago      
+MUMBAI             B1           Regular    05 Sep, 25      1      0      6h ago      
+MUMBAI             B1/B2        Regular    22 Aug, 25      1      1      6h ago      
+MUMBAI             B2           Regular    05 Sep, 25      1      2      6h ago      
+MUMBAI IV          SB1-Returni  Regular    18 Aug, 25      6      2      2d ago      
+MUMBAI VAC         B1/B2        Dropbox    18 Jun, 26      1      1      2d ago      
+MUMBAI VAC         B2           Dropbox    04 Jun, 26      1      1      9h ago      
+MUMBAI VAC         B1           Regular    25 Jun, 26      1      1      5h ago      
+MUMBAI VAC         B1/B2        Regular    25 Jun, 26      1      1      5h ago      
+MUMBAI VAC         B2           Regular    25 Jun, 26      1      1      5h ago      
+NEW DELHI          B1           Regular    25 Aug, 25      4      1      11h ago     
+NEW DELHI          B1/B2        Regular    21 Aug, 25      3      2      6h ago      
+NEW DELHI          B2           Regular    21 Aug, 25      4      11     7h ago      
+NEW DELHI VAC      B1           Dropbox    04 Aug, 25      92     236    19d ago     
+NEW DELHI VAC      B1/B2        Dropbox    25 Aug, 25      55     234    2d ago      
+NEW DELHI VAC      B2           Dropbox    25 Aug, 25      40     49     9h ago      
+NEW DELHI VAC      B1/B2        Emergency  01 Oct, 25      49     188    28d ago     
+NEW DELHI VAC      B1           Regular    25 Aug, 25      27     6      5h ago      
+NEW DELHI VAC      B1/B2        Regular    25 Aug, 25      15     3      5h ago      
+NEW DELHI VAC      B2           Regular    12 Aug, 26      13     185    5h ago      

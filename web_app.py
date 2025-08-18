@@ -335,7 +335,11 @@ def send_email_notification(email, visa_alerts):
         msg = MIMEMultipart()
         msg['From'] = f"{EMAIL_CONFIG['from_name']} <{EMAIL_CONFIG['email']}>"
         msg['To'] = email
-        msg['Subject'] = f"🚨 Fresh Visa Slots Available! ({len(visa_alerts)} alerts)"
+        # Detect if this is a test alert
+        is_test = any('[TEST ALERT]' in alert.get('visa_type', '') for alert in visa_alerts)
+        subject_prefix = "🧪 TEST ALERT - " if is_test else "🚨 "
+        
+        msg['Subject'] = f"{subject_prefix}Fresh Visa Slots Available! ({len(visa_alerts)} alerts)"
         
         # Create HTML email body
         html_body = f"""
@@ -354,11 +358,11 @@ def send_email_notification(email, visa_alerts):
         <body>
             <div class="header">
                 <h1>🎯 Fresh Visa Slots Detected!</h1>
-                <p>New appointments found within your alert threshold</p>
+                <p>{"🧪 THIS IS A TEST EMAIL - Not a real alert" if is_test else "New appointments found within your alert threshold"}</p>
             </div>
             
-            <h2>🚨 {len(visa_alerts)} New Visa Alerts</h2>
-            <p>The following visa slots have been updated recently:</p>
+            <h2>{"🧪 TEST: " if is_test else "🚨 "}{len(visa_alerts)} New Visa Alerts</h2>
+            <p>The following visa slots have been {"simulated for testing" if is_test else "updated recently"}:</p>
         """
         
         for alert in visa_alerts:
@@ -707,9 +711,9 @@ def test_alert():
             flash('Please provide an email address', 'error')
             return redirect(url_for('index'))
         
-        # Create test alert
+        # Create test alert - clearly marked as test
         test_alerts = [{
-            'visa_type': 'B1/B2',
+            'visa_type': 'B1/B2 [TEST ALERT]',
             'subtype': 'Regular',
             'location': 'NEW DELHI VAC',
             'earliest_date': '21 Aug, 25',

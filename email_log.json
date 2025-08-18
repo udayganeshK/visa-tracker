@@ -1,0 +1,157 @@
+[
+  {
+    "timestamp": "2025-08-14T18:33:20.541875",
+    "email": "uday.gnsh@gmail.com",
+    "alerts_count": 2,
+    "success": false,
+    "visa_types": [
+      "B2 (Dropbox)",
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T18:34:49.948388",
+    "email": "uday.gnsh@gmail.com",
+    "alerts_count": 2,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)",
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T18:40:18.432390",
+    "email": "srkanteti@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "Confirmation Email"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T16:27:47.742314+05:30",
+    "email": "divya.kanteti@gmail.com",
+    "alerts_count": 1,
+    "success": false,
+    "visa_types": [
+      "Confirmation Email"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T16:30:50.661213+05:30",
+    "email": "divya.kanteti@gmail.com",
+    "alerts_count": 1,
+    "success": false,
+    "visa_types": [
+      "B1/B2"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T16:33:33.044080+05:30",
+    "email": "uday.gnsh@gmail.com",
+    "alerts_count": 1,
+    "success": false,
+    "visa_types": [
+      "B1/B2"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T16:40:01.710469+05:30",
+    "email": "divya.kanteti@gmail.com",
+    "alerts_count": 1,
+    "success": false,
+    "visa_types": [
+      "Confirmation Email"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T16:43:34.680020+05:30",
+    "email": "divya.kanteti@gmail.com",
+    "alerts_count": 1,
+    "success": false,
+    "visa_types": [
+      "B1/B2"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T16:44:30.038400+05:30",
+    "email": "divya.kanteti@gmail.com",
+    "alerts_count": 1,
+    "success": false,
+    "visa_types": [
+      "B1/B2"
+    ]
+  },
+  {
+    "timestamp": "2025-08-14T16:45:28.741698+05:30",
+    "email": "divya.kanteti@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "B1/B2"
+    ]
+  },
+  {
+    "timestamp": "2025-08-15T02:39:05.409708+05:30",
+    "email": "uday.gnsh@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-15T02:39:10.700705+05:30",
+    "email": "srkanteti@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-15T02:39:15.270557+05:30",
+    "email": "divya.kanteti@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-17T19:31:10.213840+05:30",
+    "email": "uday.gnsh@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-17T19:31:14.107050+05:30",
+    "email": "srkanteti@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-17T19:41:40.391907+05:30",
+    "email": "uday.gnsh@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)"
+    ]
+  },
+  {
+    "timestamp": "2025-08-17T19:41:45.386373+05:30",
+    "email": "srkanteti@gmail.com",
+    "alerts_count": 1,
+    "success": true,
+    "visa_types": [
+      "B2 (Dropbox)"
+    ]
+  }
+]

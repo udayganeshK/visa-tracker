@@ -1,0 +1,11 @@
+{
+  "emails_sent": 10,
+  "emails_failed": 7,
+  "subscriptions_created": 2,
+  "subscriptions_updated": 1,
+  "subscriptions_saved": 3,
+  "checks_performed": 117,
+  "last_startup": "2025-08-18T13:46:52.548758+05:30",
+  "app_version": "1.0",
+  "last_updated": "2025-08-18T15:38:18.164207+05:30"
+}

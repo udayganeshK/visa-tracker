@@ -1,0 +1,2129 @@
+{
+  "result": {
+    "B1 (Regular)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 10:04:19",
+        "no_of_dates": 11,
+        "no_of_apnts": 2,
+        "earliest_date": "04 Nov, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 10:04:52",
+        "no_of_dates": 100,
+        "no_of_apnts": 130,
+        "earliest_date": "29 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 10:05:10",
+        "no_of_dates": 2,
+        "no_of_apnts": 1,
+        "earliest_date": "07 Jul, 26"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 10:05:23",
+        "no_of_dates": 120,
+        "no_of_apnts": 1,
+        "earliest_date": "25 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 10:01:24",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "12 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 10:02:21",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "08 Oct, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 09:47:28",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "22 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 10:04:48",
+        "no_of_dates": 93,
+        "no_of_apnts": 2,
+        "earliest_date": "05 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 07:01:00",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "08 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "B1 (Regular)",
+        "createdon": "2025-08-18 09:47:33",
+        "no_of_dates": 2,
+        "no_of_apnts": 2,
+        "earliest_date": "22 Aug, 25"
+      }
+    ],
+    "B1/B2 (Dropbox)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "B1/B2 (Dropbox)",
+        "createdon": "2025-08-11 18:41:06",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "18 Jun, 26"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "B1/B2 (Dropbox)",
+        "createdon": "2025-08-11 18:41:12",
+        "no_of_dates": 55,
+        "no_of_apnts": 234,
+        "earliest_date": "25 Aug, 25"
+      }
+    ],
+    "B1/B2 (Regular)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:05:17",
+        "no_of_dates": 10,
+        "no_of_apnts": 19,
+        "earliest_date": "05 Nov, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:05:23",
+        "no_of_dates": 69,
+        "no_of_apnts": 2,
+        "earliest_date": "18 Feb, 26"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:05:23",
+        "no_of_dates": 2,
+        "no_of_apnts": 1,
+        "earliest_date": "07 Jul, 26"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:05:22",
+        "no_of_dates": 120,
+        "no_of_apnts": 1,
+        "earliest_date": "25 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 09:35:21",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "22 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:01:27",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "12 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:02:40",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "10 Oct, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:05:11",
+        "no_of_dates": 93,
+        "no_of_apnts": 2,
+        "earliest_date": "05 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:01:54",
+        "no_of_dates": 16,
+        "no_of_apnts": 183,
+        "earliest_date": "05 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "B1/B2 (Regular)",
+        "createdon": "2025-08-18 10:04:00",
+        "no_of_dates": 3,
+        "no_of_apnts": 1,
+        "earliest_date": "04 Nov, 25"
+      }
+    ],
+    "B2 (Regular)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 10:05:14",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "16 Apr, 26"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 10:05:21",
+        "no_of_dates": 33,
+        "no_of_apnts": 3,
+        "earliest_date": "19 Feb, 26"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 10:02:58",
+        "no_of_dates": 61,
+        "no_of_apnts": 2,
+        "earliest_date": "05 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 09:41:58",
+        "no_of_dates": 2,
+        "no_of_apnts": 3,
+        "earliest_date": "03 Feb, 26"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 10:05:09",
+        "no_of_dates": 2,
+        "no_of_apnts": 1,
+        "earliest_date": "07 Jul, 26"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 10:05:22",
+        "no_of_dates": 60,
+        "no_of_apnts": 141,
+        "earliest_date": "26 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 10:00:31",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "30 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 10:02:05",
+        "no_of_dates": 3,
+        "no_of_apnts": 2,
+        "earliest_date": "06 Oct, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 09:42:08",
+        "no_of_dates": 3,
+        "no_of_apnts": 3,
+        "earliest_date": "06 Feb, 26"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "B2 (Regular)",
+        "createdon": "2025-08-18 06:36:20",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "22 Oct, 25"
+      }
+    ],
+    "F-1 (Regular)": [
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-18 10:02:45",
+        "no_of_dates": 1,
+        "no_of_apnts": 0,
+        "earliest_date": "04 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-18 10:04:51",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-18 10:04:27",
+        "no_of_dates": 1,
+        "no_of_apnts": 0,
+        "earliest_date": "08 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-18 10:05:20",
+        "no_of_dates": 2,
+        "no_of_apnts": 1,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-18 10:05:15",
+        "no_of_dates": 7,
+        "no_of_apnts": 2,
+        "earliest_date": "26 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-18 10:03:08",
+        "no_of_dates": 3,
+        "no_of_apnts": 0,
+        "earliest_date": "08 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-18 10:04:55",
+        "no_of_dates": 4,
+        "no_of_apnts": 1,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-17 09:00:42",
+        "no_of_dates": 1,
+        "no_of_apnts": 0,
+        "earliest_date": "20 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "F-1 (Regular)",
+        "createdon": "2025-08-17 11:59:10",
+        "no_of_dates": 2,
+        "no_of_apnts": 24,
+        "earliest_date": "28 Aug, 25"
+      }
+    ],
+    "H-1B (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "H-1B (Dropbox)",
+        "createdon": "2025-08-18 01:33:39",
+        "no_of_dates": 44,
+        "no_of_apnts": 374,
+        "earliest_date": "25 Aug, 25"
+      }
+    ],
+    "H-1B (Regular)": [
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "H-1B (Regular)",
+        "createdon": "2025-08-18 10:02:51",
+        "no_of_dates": 7,
+        "no_of_apnts": 2,
+        "earliest_date": "02 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "H-1B (Regular)",
+        "createdon": "2025-08-18 10:04:28",
+        "no_of_dates": 14,
+        "no_of_apnts": 1,
+        "earliest_date": "29 Sep, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "H-1B (Regular)",
+        "createdon": "2025-08-18 09:55:29",
+        "no_of_dates": 9,
+        "no_of_apnts": 10,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "H-1B (Regular)",
+        "createdon": "2025-08-04 09:31:17",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "22 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "H-1B (Regular)",
+        "createdon": "2025-07-23 12:37:48",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "25 Jul, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "H-1B (Regular)",
+        "createdon": "2025-08-18 09:36:41",
+        "no_of_dates": 3,
+        "no_of_apnts": 1,
+        "earliest_date": "26 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "H-1B (Regular)",
+        "createdon": "2025-08-18 10:03:14",
+        "no_of_dates": 25,
+        "no_of_apnts": 1,
+        "earliest_date": "21 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "H-1B (Regular)",
+        "createdon": "2025-08-06 00:34:26",
+        "no_of_dates": 7,
+        "no_of_apnts": 0,
+        "earliest_date": "07 Oct, 25"
+      }
+    ],
+    "H-4 (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "H-4 (Dropbox)",
+        "createdon": "2025-08-11 04:29:03",
+        "no_of_dates": 42,
+        "no_of_apnts": 11,
+        "earliest_date": "13 Aug, 25"
+      }
+    ],
+    "B2 (Dropbox)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "B2 (Dropbox)",
+        "createdon": "2025-08-14 02:38:36",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "04 Jun, 26"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "B2 (Dropbox)",
+        "createdon": "2025-08-17 13:29:21",
+        "no_of_dates": 24,
+        "no_of_apnts": 4,
+        "earliest_date": "14 Oct, 25"
+      }
+    ],
+    "C-1 (Regular)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "C-1 (Regular)",
+        "createdon": "2025-08-18 10:01:02",
+        "no_of_dates": 17,
+        "no_of_apnts": 2,
+        "earliest_date": "04 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "C-1 (Regular)",
+        "createdon": "2025-08-18 09:38:14",
+        "no_of_dates": 78,
+        "no_of_apnts": 1,
+        "earliest_date": "21 Jan, 26"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "C-1 (Regular)",
+        "createdon": "2025-08-18 10:03:24",
+        "no_of_dates": 4,
+        "no_of_apnts": 1,
+        "earliest_date": "17 Mar, 26"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "C-1 (Regular)",
+        "createdon": "2025-08-18 10:04:50",
+        "no_of_dates": 120,
+        "no_of_apnts": 7,
+        "earliest_date": "25 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "C-1 (Regular)",
+        "createdon": "2025-07-21 06:43:35",
+        "no_of_dates": 8,
+        "no_of_apnts": 196,
+        "earliest_date": "01 Aug, 25"
+      }
+    ],
+    "C1/D (Regular)": [
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "C1/D (Regular)",
+        "createdon": "2025-08-18 06:07:20",
+        "no_of_dates": 3,
+        "no_of_apnts": 14,
+        "earliest_date": "09 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "C1/D (Regular)",
+        "createdon": "2025-08-17 14:04:19",
+        "no_of_dates": 5,
+        "no_of_apnts": 72,
+        "earliest_date": "05 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "C1/D (Regular)",
+        "createdon": "2025-08-18 06:06:49",
+        "no_of_dates": 39,
+        "no_of_apnts": 10,
+        "earliest_date": "20 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "C1/D (Regular)",
+        "createdon": "2025-08-17 14:05:12",
+        "no_of_dates": 24,
+        "no_of_apnts": 3,
+        "earliest_date": "16 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "C1/D (Regular)",
+        "createdon": "2025-08-18 06:07:00",
+        "no_of_dates": 29,
+        "no_of_apnts": 16,
+        "earliest_date": "04 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "C1/D (Regular)",
+        "createdon": "2025-08-09 16:19:15",
+        "no_of_dates": 5,
+        "no_of_apnts": 6,
+        "earliest_date": "07 Oct, 25"
+      }
+    ],
+    "H-4 (Regular)": [
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "H-4 (Regular)",
+        "createdon": "2025-08-18 08:36:19",
+        "no_of_dates": 9,
+        "no_of_apnts": 3,
+        "earliest_date": "03 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "H-4 (Regular)",
+        "createdon": "2025-08-18 08:37:22",
+        "no_of_dates": 3,
+        "no_of_apnts": 1,
+        "earliest_date": "11 Sep, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "H-4 (Regular)",
+        "createdon": "2025-08-18 08:00:39",
+        "no_of_dates": 9,
+        "no_of_apnts": 7,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "H-4 (Regular)",
+        "createdon": "2025-08-18 08:01:14",
+        "no_of_dates": 22,
+        "no_of_apnts": 1,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "H-4 (Regular)",
+        "createdon": "2025-08-18 08:01:17",
+        "no_of_dates": 2,
+        "no_of_apnts": 2,
+        "earliest_date": "03 Nov, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "H-4 (Regular)",
+        "createdon": "2025-08-06 04:03:57",
+        "no_of_dates": 6,
+        "no_of_apnts": 6,
+        "earliest_date": "03 Sep, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "H-4 (Regular)",
+        "createdon": "2025-08-10 06:39:03",
+        "no_of_dates": 3,
+        "no_of_apnts": 76,
+        "earliest_date": "19 Sep, 25"
+      }
+    ],
+    "I (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "I (Regular)",
+        "createdon": "2025-07-28 11:01:21",
+        "no_of_dates": 6,
+        "no_of_apnts": 1,
+        "earliest_date": "23 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "I (Regular)",
+        "createdon": "2025-07-28 17:01:08",
+        "no_of_dates": 85,
+        "no_of_apnts": 190,
+        "earliest_date": "06 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "I (Regular)",
+        "createdon": "2025-07-28 14:32:20",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "12 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "I (Regular)",
+        "createdon": "2025-07-28 14:31:33",
+        "no_of_dates": 2,
+        "no_of_apnts": 1,
+        "earliest_date": "18 Aug, 25"
+      }
+    ],
+    "L-1 (Individual) (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "L-1 (Individual) (Dropbox)",
+        "createdon": "2025-08-14 01:14:02",
+        "no_of_dates": 38,
+        "no_of_apnts": 369,
+        "earliest_date": "19 Aug, 25"
+      }
+    ],
+    "L-1 (Individual) (Regular)": [
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "L-1 (Individual) (Regular)",
+        "createdon": "2025-08-18 05:19:24",
+        "no_of_dates": 9,
+        "no_of_apnts": 155,
+        "earliest_date": "26 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "L-1 (Individual) (Regular)",
+        "createdon": "2025-08-18 06:02:56",
+        "no_of_dates": 3,
+        "no_of_apnts": 29,
+        "earliest_date": "05 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "L-1 (Individual) (Regular)",
+        "createdon": "2025-08-18 05:18:23",
+        "no_of_dates": 20,
+        "no_of_apnts": 70,
+        "earliest_date": "03 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "L-1 (Individual) (Regular)",
+        "createdon": "2025-08-17 12:02:56",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "03 Nov, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "L-1 (Individual) (Regular)",
+        "createdon": "2025-08-18 00:08:06",
+        "no_of_dates": 9,
+        "no_of_apnts": 7,
+        "earliest_date": "19 Aug, 25"
+      }
+    ],
+    "F41 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "F41 (Regular)",
+        "createdon": "2025-08-12 06:46:06",
+        "no_of_dates": 15,
+        "no_of_apnts": 52,
+        "earliest_date": "13 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "F41 (Regular)",
+        "createdon": "2025-07-23 08:25:05",
+        "no_of_dates": 2,
+        "no_of_apnts": 2,
+        "earliest_date": "24 Jul, 25"
+      }
+    ],
+    "CR1 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "CR1 (Regular)",
+        "createdon": "2025-08-12 10:49:37",
+        "no_of_dates": 16,
+        "no_of_apnts": 29,
+        "earliest_date": "13 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "CR1 (Regular)",
+        "createdon": "2025-08-10 14:38:48",
+        "no_of_dates": 6,
+        "no_of_apnts": 43,
+        "earliest_date": "07 Sep, 25"
+      }
+    ],
+    "IR5 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "IR5 (Regular)",
+        "createdon": "2025-08-16 17:28:40",
+        "no_of_dates": 5,
+        "no_of_apnts": 9,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "IR5 (Regular)",
+        "createdon": "2025-08-12 12:24:49",
+        "no_of_dates": 8,
+        "no_of_apnts": 10,
+        "earliest_date": "17 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI IV",
+        "visa_type": "IR5 (Regular)",
+        "createdon": "2025-08-13 12:45:58",
+        "no_of_dates": 6,
+        "no_of_apnts": 1,
+        "earliest_date": "26 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "IR5 (Regular)",
+        "createdon": "2025-08-16 17:10:41",
+        "no_of_dates": 4,
+        "no_of_apnts": 2,
+        "earliest_date": "07 Sep, 25"
+      }
+    ],
+    "L-2 (Blanket) (Regular)": [
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "L-2 (Blanket) (Regular)",
+        "createdon": "2025-08-18 04:34:26",
+        "no_of_dates": 8,
+        "no_of_apnts": 44,
+        "earliest_date": "06 Oct, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "L-2 (Blanket) (Regular)",
+        "createdon": "2025-08-18 04:27:40",
+        "no_of_dates": 14,
+        "no_of_apnts": 72,
+        "earliest_date": "06 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "L-2 (Blanket) (Regular)",
+        "createdon": "2025-08-13 06:44:33",
+        "no_of_dates": 24,
+        "no_of_apnts": 3,
+        "earliest_date": "20 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "L-2 (Blanket) (Regular)",
+        "createdon": "2025-07-23 00:32:14",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "28 Jul, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "L-2 (Blanket) (Regular)",
+        "createdon": "2025-08-11 07:09:47",
+        "no_of_dates": 1,
+        "no_of_apnts": 4,
+        "earliest_date": "28 Oct, 25"
+      }
+    ],
+    "R-1 (Regular)": [
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-16 06:19:41",
+        "no_of_dates": 32,
+        "no_of_apnts": 61,
+        "earliest_date": "25 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-17 11:40:16",
+        "no_of_dates": 3,
+        "no_of_apnts": 102,
+        "earliest_date": "31 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-18 05:56:14",
+        "no_of_dates": 20,
+        "no_of_apnts": 7,
+        "earliest_date": "25 Sep, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-16 06:19:29",
+        "no_of_dates": 30,
+        "no_of_apnts": 13,
+        "earliest_date": "21 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-16 06:19:50",
+        "no_of_dates": 3,
+        "no_of_apnts": 1,
+        "earliest_date": "12 Oct, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-17 11:41:22",
+        "no_of_dates": 4,
+        "no_of_apnts": 10,
+        "earliest_date": "08 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-18 05:56:51",
+        "no_of_dates": 4,
+        "no_of_apnts": 9,
+        "earliest_date": "27 Oct, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-13 08:32:52",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "11 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-18 06:03:26",
+        "no_of_dates": 9,
+        "no_of_apnts": 9,
+        "earliest_date": "27 Oct, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "R-1 (Regular)",
+        "createdon": "2025-08-13 08:33:46",
+        "no_of_dates": 7,
+        "no_of_apnts": 10,
+        "earliest_date": "21 Aug, 25"
+      }
+    ],
+    "L-1 (Blanket) (Regular)": [
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "L-1 (Blanket) (Regular)",
+        "createdon": "2025-08-18 03:57:34",
+        "no_of_dates": 16,
+        "no_of_apnts": 3,
+        "earliest_date": "05 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "L-1 (Blanket) (Regular)",
+        "createdon": "2025-08-17 05:42:07",
+        "no_of_dates": 1,
+        "no_of_apnts": 3,
+        "earliest_date": "20 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "L-1 (Blanket) (Regular)",
+        "createdon": "2025-08-17 05:42:04",
+        "no_of_dates": 38,
+        "no_of_apnts": 3,
+        "earliest_date": "18 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "L-1 (Blanket) (Regular)",
+        "createdon": "2025-08-17 05:42:09",
+        "no_of_dates": 9,
+        "no_of_apnts": 20,
+        "earliest_date": "19 Aug, 25"
+      }
+    ],
+    "L-2 (Individual) (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "L-2 (Individual) (Regular)",
+        "createdon": "2025-08-17 23:55:10",
+        "no_of_dates": 20,
+        "no_of_apnts": 26,
+        "earliest_date": "03 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "L-2 (Individual) (Regular)",
+        "createdon": "2025-08-18 02:31:19",
+        "no_of_dates": 5,
+        "no_of_apnts": 16,
+        "earliest_date": "11 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "L-2 (Individual) (Regular)",
+        "createdon": "2025-08-18 02:31:42",
+        "no_of_dates": 12,
+        "no_of_apnts": 56,
+        "earliest_date": "05 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "L-2 (Individual) (Regular)",
+        "createdon": "2025-08-17 03:02:00",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "28 Oct, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "L-2 (Individual) (Regular)",
+        "createdon": "2025-08-17 14:46:37",
+        "no_of_dates": 9,
+        "no_of_apnts": 10,
+        "earliest_date": "19 Aug, 25"
+      }
+    ],
+    "TD (Regular)": [
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "TD (Regular)",
+        "createdon": "2025-08-12 19:23:41",
+        "no_of_dates": 3,
+        "no_of_apnts": 68,
+        "earliest_date": "28 Jul, 26"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "TD (Regular)",
+        "createdon": "2025-08-12 19:23:38",
+        "no_of_dates": 9,
+        "no_of_apnts": 13,
+        "earliest_date": "10 Aug, 26"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "TD (Regular)",
+        "createdon": "2025-08-12 19:23:45",
+        "no_of_dates": 9,
+        "no_of_apnts": 13,
+        "earliest_date": "10 Aug, 26"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "TD (Regular)",
+        "createdon": "2025-08-11 19:29:38",
+        "no_of_dates": 3,
+        "no_of_apnts": 1,
+        "earliest_date": "22 Jul, 26"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "TD (Regular)",
+        "createdon": "2025-08-12 19:23:35",
+        "no_of_dates": 20,
+        "no_of_apnts": 205,
+        "earliest_date": "26 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "TD (Regular)",
+        "createdon": "2025-08-11 10:30:25",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "04 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "TD (Regular)",
+        "createdon": "2025-08-11 10:33:38",
+        "no_of_dates": 1,
+        "no_of_apnts": 36,
+        "earliest_date": "26 Aug, 25"
+      }
+    ],
+    "L-2 (Individual) (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "L-2 (Individual) (Dropbox)",
+        "createdon": "2025-07-24 00:11:46",
+        "no_of_dates": 1,
+        "no_of_apnts": 4,
+        "earliest_date": "25 Jul, 25"
+      }
+    ],
+    "B1 (Dropbox)": [
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "B1 (Dropbox)",
+        "createdon": "2025-07-26 07:28:18",
+        "no_of_dates": 92,
+        "no_of_apnts": 236,
+        "earliest_date": "04 Aug, 25"
+      }
+    ],
+    "IR1 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "IR1 (Regular)",
+        "createdon": "2025-08-18 05:57:57",
+        "no_of_dates": 26,
+        "no_of_apnts": 51,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "IR1 (Regular)",
+        "createdon": "2025-08-18 05:57:39",
+        "no_of_dates": 6,
+        "no_of_apnts": 47,
+        "earliest_date": "31 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "IR1 (Regular)",
+        "createdon": "2025-08-18 06:06:37",
+        "no_of_dates": 4,
+        "no_of_apnts": 1,
+        "earliest_date": "07 Sep, 25"
+      }
+    ],
+    "F31 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "F31 (Regular)",
+        "createdon": "2025-08-12 06:47:53",
+        "no_of_dates": 15,
+        "no_of_apnts": 61,
+        "earliest_date": "13 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "F31 (Regular)",
+        "createdon": "2025-08-05 14:56:23",
+        "no_of_dates": 1,
+        "no_of_apnts": 3,
+        "earliest_date": "24 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "F31 (Regular)",
+        "createdon": "2025-08-07 12:40:30",
+        "no_of_dates": 2,
+        "no_of_apnts": 8,
+        "earliest_date": "10 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI IV",
+        "visa_type": "F31 (Regular)",
+        "createdon": "2025-07-30 06:07:43",
+        "no_of_dates": 1,
+        "no_of_apnts": 9,
+        "earliest_date": "21 Aug, 25"
+      }
+    ],
+    "O-1 (Regular)": [
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "O-1 (Regular)",
+        "createdon": "2025-08-04 07:58:55",
+        "no_of_dates": 4,
+        "no_of_apnts": 8,
+        "earliest_date": "22 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "O-1 (Regular)",
+        "createdon": "2025-08-18 08:19:16",
+        "no_of_dates": 36,
+        "no_of_apnts": 2,
+        "earliest_date": "26 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "O-1 (Regular)",
+        "createdon": "2025-08-18 08:19:09",
+        "no_of_dates": 34,
+        "no_of_apnts": 28,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "O-1 (Regular)",
+        "createdon": "2025-08-17 19:48:33",
+        "no_of_dates": 13,
+        "no_of_apnts": 5,
+        "earliest_date": "22 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "O-1 (Regular)",
+        "createdon": "2025-08-14 07:21:10",
+        "no_of_dates": 3,
+        "no_of_apnts": 10,
+        "earliest_date": "28 Oct, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "O-1 (Regular)",
+        "createdon": "2025-08-04 07:58:53",
+        "no_of_dates": 5,
+        "no_of_apnts": 1,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "O-1 (Regular)",
+        "createdon": "2025-08-04 07:58:47",
+        "no_of_dates": 4,
+        "no_of_apnts": 2,
+        "earliest_date": "25 Aug, 25"
+      }
+    ],
+    "C1/D (Dropbox)": [
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "C1/D (Dropbox)",
+        "createdon": "2025-07-24 05:04:14",
+        "no_of_dates": 97,
+        "no_of_apnts": 65,
+        "earliest_date": "25 Jul, 25"
+      }
+    ],
+    "K1 (Regular)": [
+      {
+        "visa_location": "MUMBAI IV",
+        "visa_type": "K1 (Regular)",
+        "createdon": "2025-07-19 13:50:33",
+        "no_of_dates": 4,
+        "no_of_apnts": 1,
+        "earliest_date": "04 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "K1 (Regular)",
+        "createdon": "2025-07-19 13:27:23",
+        "no_of_dates": 9,
+        "no_of_apnts": 10,
+        "earliest_date": "21 Jul, 25"
+      }
+    ],
+    "IR5. (Regular)": [
+      {
+        "visa_location": "MUMBAI IV",
+        "visa_type": "IR5. (Regular)",
+        "createdon": "2025-08-07 09:52:16",
+        "no_of_dates": 3,
+        "no_of_apnts": 3,
+        "earliest_date": "22 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "IR5. (Regular)",
+        "createdon": "2025-08-07 09:43:40",
+        "no_of_dates": 3,
+        "no_of_apnts": 17,
+        "earliest_date": "10 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "IR5. (Regular)",
+        "createdon": "2025-07-28 07:34:45",
+        "no_of_dates": 3,
+        "no_of_apnts": 10,
+        "earliest_date": "29 Jul, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "IR5. (Regular)",
+        "createdon": "2025-08-07 09:51:52",
+        "no_of_dates": 12,
+        "no_of_apnts": 4,
+        "earliest_date": "08 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "IR5. (Regular)",
+        "createdon": "2025-08-07 09:51:43",
+        "no_of_dates": 3,
+        "no_of_apnts": 4,
+        "earliest_date": "10 Aug, 25"
+      }
+    ],
+    "P-3 (Regular)": [
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "P-3 (Regular)",
+        "createdon": "2025-08-12 07:05:07",
+        "no_of_dates": 3,
+        "no_of_apnts": 6,
+        "earliest_date": "02 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "P-3 (Regular)",
+        "createdon": "2025-08-12 11:09:49",
+        "no_of_dates": 35,
+        "no_of_apnts": 9,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "P-3 (Regular)",
+        "createdon": "2025-08-12 07:05:16",
+        "no_of_dates": 2,
+        "no_of_apnts": 1,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "P-3 (Regular)",
+        "createdon": "2025-08-12 07:05:13",
+        "no_of_dates": 7,
+        "no_of_apnts": 1,
+        "earliest_date": "02 Sep, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "P-3 (Regular)",
+        "createdon": "2025-08-06 06:13:58",
+        "no_of_dates": 4,
+        "no_of_apnts": 1,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "P-3 (Regular)",
+        "createdon": "2025-08-07 08:21:43",
+        "no_of_dates": 15,
+        "no_of_apnts": 5,
+        "earliest_date": "10 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "P-3 (Regular)",
+        "createdon": "2025-08-06 06:09:55",
+        "no_of_dates": 1,
+        "no_of_apnts": 3,
+        "earliest_date": "11 Sep, 25"
+      }
+    ],
+    "M-1 (Regular)": [
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "M-1 (Regular)",
+        "createdon": "2025-08-17 19:27:37",
+        "no_of_dates": 1,
+        "no_of_apnts": 0,
+        "earliest_date": "04 Nov, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "M-1 (Regular)",
+        "createdon": "2025-08-07 10:52:32",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "M-1 (Regular)",
+        "createdon": "2025-08-17 18:57:16",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "09 Oct, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "M-1 (Regular)",
+        "createdon": "2025-08-17 13:27:20",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "09 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "M-1 (Regular)",
+        "createdon": "2025-08-17 13:27:32",
+        "no_of_dates": 4,
+        "no_of_apnts": 22,
+        "earliest_date": "26 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "M-1 (Regular)",
+        "createdon": "2025-08-13 03:01:14",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "M-1 (Regular)",
+        "createdon": "2025-08-17 18:11:29",
+        "no_of_dates": 1,
+        "no_of_apnts": 4,
+        "earliest_date": "12 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "M-1 (Regular)",
+        "createdon": "2025-08-17 12:11:56",
+        "no_of_dates": 3,
+        "no_of_apnts": 14,
+        "earliest_date": "07 Oct, 25"
+      }
+    ],
+    "O-1 (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "O-1 (Dropbox)",
+        "createdon": "2025-08-04 07:46:52",
+        "no_of_dates": 40,
+        "no_of_apnts": 3,
+        "earliest_date": "06 Aug, 25"
+      }
+    ],
+    "F-2 (Regular)": [
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "F-2 (Regular)",
+        "createdon": "2025-08-18 10:02:41",
+        "no_of_dates": 1,
+        "no_of_apnts": 0,
+        "earliest_date": "08 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "F-2 (Regular)",
+        "createdon": "2025-08-18 09:28:44",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "04 Nov, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "F-2 (Regular)",
+        "createdon": "2025-08-18 10:02:44",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "08 Oct, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "F-2 (Regular)",
+        "createdon": "2025-08-17 08:30:27",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "22 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "F-2 (Regular)",
+        "createdon": "2025-08-17 18:03:29",
+        "no_of_dates": 4,
+        "no_of_apnts": 15,
+        "earliest_date": "27 Oct, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "F-2 (Regular)",
+        "createdon": "2025-08-09 04:34:12",
+        "no_of_dates": 2,
+        "no_of_apnts": 1,
+        "earliest_date": "21 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "F-2 (Regular)",
+        "createdon": "2025-08-17 17:31:41",
+        "no_of_dates": 2,
+        "no_of_apnts": 14,
+        "earliest_date": "12 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "F-2 (Regular)",
+        "createdon": "2025-08-17 17:27:47",
+        "no_of_dates": 4,
+        "no_of_apnts": 8,
+        "earliest_date": "03 Nov, 25"
+      }
+    ],
+    "L-2 (Blanket) (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "L-2 (Blanket) (Dropbox)",
+        "createdon": "2025-07-26 08:01:23",
+        "no_of_dates": 1,
+        "no_of_apnts": 3,
+        "earliest_date": "31 Jul, 25"
+      }
+    ],
+    "J-1 Physicians (Regular)": [
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "J-1 Physicians (Regular)",
+        "createdon": "2025-08-17 18:06:59",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "10 Oct, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "J-1 Physicians (Regular)",
+        "createdon": "2025-08-17 23:38:41",
+        "no_of_dates": 7,
+        "no_of_apnts": 9,
+        "earliest_date": "07 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "J-1 Physicians (Regular)",
+        "createdon": "2025-08-01 14:22:57",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "07 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "J-1 Physicians (Regular)",
+        "createdon": "2025-08-17 23:38:18",
+        "no_of_dates": 5,
+        "no_of_apnts": 3,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "J-1 Physicians (Regular)",
+        "createdon": "2025-08-17 12:28:44",
+        "no_of_dates": 13,
+        "no_of_apnts": 4,
+        "earliest_date": "03 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "J-1 Physicians (Regular)",
+        "createdon": "2025-08-17 18:07:16",
+        "no_of_dates": 13,
+        "no_of_apnts": 2,
+        "earliest_date": "10 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "J-1 Physicians (Regular)",
+        "createdon": "2025-08-17 23:38:30",
+        "no_of_dates": 12,
+        "no_of_apnts": 2,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "J-1 Physicians (Regular)",
+        "createdon": "2025-08-17 23:38:22",
+        "no_of_dates": 8,
+        "no_of_apnts": 5,
+        "earliest_date": "19 Aug, 25"
+      }
+    ],
+    "J-1 (Regular)": [
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "J-1 (Regular)",
+        "createdon": "2025-08-18 08:27:02",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "17 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "J-1 (Regular)",
+        "createdon": "2025-08-17 19:02:13",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "29 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "J-1 (Regular)",
+        "createdon": "2025-08-18 10:02:02",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "15 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "J-1 (Regular)",
+        "createdon": "2025-08-18 10:01:06",
+        "no_of_dates": 5,
+        "no_of_apnts": 1,
+        "earliest_date": "19 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "J-1 (Regular)",
+        "createdon": "2025-08-18 10:02:32",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "16 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "J-1 (Regular)",
+        "createdon": "2025-08-03 11:17:00",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "J-1 (Regular)",
+        "createdon": "2025-08-18 06:32:21",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "29 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "J-1 (Regular)",
+        "createdon": "2025-08-02 10:10:50",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "07 Aug, 25"
+      }
+    ],
+    "J-2 (Regular)": [
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "J-2 (Regular)",
+        "createdon": "2025-08-17 12:04:20",
+        "no_of_dates": 4,
+        "no_of_apnts": 3,
+        "earliest_date": "08 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "J-2 (Regular)",
+        "createdon": "2025-08-17 12:57:56",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "29 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "J-2 (Regular)",
+        "createdon": "2025-08-17 20:08:26",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "27 Oct, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "J-2 (Regular)",
+        "createdon": "2025-08-02 10:40:25",
+        "no_of_dates": 1,
+        "no_of_apnts": 4,
+        "earliest_date": "22 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "J-2 (Regular)",
+        "createdon": "2025-08-17 20:35:17",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "17 Sep, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "J-2 (Regular)",
+        "createdon": "2025-08-17 11:33:26",
+        "no_of_dates": 1,
+        "no_of_apnts": 4,
+        "earliest_date": "10 Oct, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "J-2 (Regular)",
+        "createdon": "2025-08-17 20:35:11",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "18 Sep, 25"
+      }
+    ],
+    "F41. (Regular)": [
+      {
+        "visa_location": "MUMBAI IV",
+        "visa_type": "F41. (Regular)",
+        "createdon": "2025-08-16 16:22:17",
+        "no_of_dates": 6,
+        "no_of_apnts": 7,
+        "earliest_date": "28 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "F41. (Regular)",
+        "createdon": "2025-08-16 16:21:59",
+        "no_of_dates": 8,
+        "no_of_apnts": 7,
+        "earliest_date": "18 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "F41. (Regular)",
+        "createdon": "2025-08-13 22:59:00",
+        "no_of_dates": 1,
+        "no_of_apnts": 5,
+        "earliest_date": "17 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "F41. (Regular)",
+        "createdon": "2025-08-16 16:21:36",
+        "no_of_dates": 1,
+        "no_of_apnts": 7,
+        "earliest_date": "24 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "F41. (Regular)",
+        "createdon": "2025-08-16 16:21:25",
+        "no_of_dates": 2,
+        "no_of_apnts": 3,
+        "earliest_date": "24 Aug, 25"
+      }
+    ],
+    "F31 (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "F31 (Dropbox)",
+        "createdon": "2025-07-27 10:48:26",
+        "no_of_dates": 4,
+        "no_of_apnts": 35,
+        "earliest_date": "03 Aug, 25"
+      }
+    ],
+    "R-2 (Regular)": [
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-16 07:33:42",
+        "no_of_dates": 8,
+        "no_of_apnts": 1,
+        "earliest_date": "24 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-17 08:59:06",
+        "no_of_dates": 1,
+        "no_of_apnts": 6,
+        "earliest_date": "04 Sep, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-17 09:21:52",
+        "no_of_dates": 4,
+        "no_of_apnts": 9,
+        "earliest_date": "04 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-07-31 18:56:10",
+        "no_of_dates": 4,
+        "no_of_apnts": 2,
+        "earliest_date": "19 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-17 18:03:17",
+        "no_of_dates": 27,
+        "no_of_apnts": 238,
+        "earliest_date": "25 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-16 00:04:22",
+        "no_of_dates": 3,
+        "no_of_apnts": 1,
+        "earliest_date": "12 Oct, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-17 18:03:38",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "11 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-17 08:59:08",
+        "no_of_dates": 3,
+        "no_of_apnts": 6,
+        "earliest_date": "19 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-16 06:32:08",
+        "no_of_dates": 4,
+        "no_of_apnts": 1,
+        "earliest_date": "22 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "R-2 (Regular)",
+        "createdon": "2025-08-16 00:04:14",
+        "no_of_dates": 30,
+        "no_of_apnts": 21,
+        "earliest_date": "21 Aug, 25"
+      }
+    ],
+    "F-2 (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "F-2 (Dropbox)",
+        "createdon": "2025-07-25 02:03:31",
+        "no_of_dates": 4,
+        "no_of_apnts": 4,
+        "earliest_date": "07 Aug, 25"
+      }
+    ],
+    "F-1 (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "F-1 (Dropbox)",
+        "createdon": "2025-07-25 10:36:04",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "14 Aug, 25"
+      }
+    ],
+    "J-1 (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "J-1 (Dropbox)",
+        "createdon": "2025-07-26 12:26:19",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "04 Aug, 25"
+      }
+    ],
+    "IR2 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "IR2 (Regular)",
+        "createdon": "2025-07-30 07:37:26",
+        "no_of_dates": 16,
+        "no_of_apnts": 12,
+        "earliest_date": "31 Jul, 25"
+      },
+      {
+        "visa_location": "MUMBAI IV",
+        "visa_type": "IR2 (Regular)",
+        "createdon": "2025-07-30 07:54:24",
+        "no_of_dates": 6,
+        "no_of_apnts": 1,
+        "earliest_date": "05 Aug, 25"
+      }
+    ],
+    "J-2 (Dropbox)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "J-2 (Dropbox)",
+        "createdon": "2025-07-24 23:31:03",
+        "no_of_dates": 5,
+        "no_of_apnts": 5,
+        "earliest_date": "04 Aug, 25"
+      }
+    ],
+    "H-1B (Emergency)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "H-1B (Emergency)",
+        "createdon": "2025-07-28 03:25:16",
+        "no_of_dates": 12,
+        "no_of_apnts": 58,
+        "earliest_date": "29 Jul, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "H-1B (Emergency)",
+        "createdon": "2025-07-28 03:25:34",
+        "no_of_dates": 32,
+        "no_of_apnts": 48,
+        "earliest_date": "07 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "H-1B (Emergency)",
+        "createdon": "2025-07-28 03:25:07",
+        "no_of_dates": 10,
+        "no_of_apnts": 21,
+        "earliest_date": "13 Aug, 25"
+      }
+    ],
+    "I53 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "I53 (Regular)",
+        "createdon": "2025-08-01 11:49:27",
+        "no_of_dates": 17,
+        "no_of_apnts": 15,
+        "earliest_date": "04 Aug, 25"
+      }
+    ],
+    "I5 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "I5 (Regular)",
+        "createdon": "2025-08-01 11:40:23",
+        "no_of_dates": 17,
+        "no_of_apnts": 17,
+        "earliest_date": "04 Aug, 25"
+      }
+    ],
+    "I52 (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "I52 (Regular)",
+        "createdon": "2025-08-01 11:45:46",
+        "no_of_dates": 17,
+        "no_of_apnts": 16,
+        "earliest_date": "04 Aug, 25"
+      }
+    ],
+    "U-1 (Regular)": [
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "U-1 (Regular)",
+        "createdon": "2025-08-02 09:58:53",
+        "no_of_dates": 5,
+        "no_of_apnts": 548,
+        "earliest_date": "25 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "U-1 (Regular)",
+        "createdon": "2025-08-02 09:57:54",
+        "no_of_dates": 8,
+        "no_of_apnts": 2,
+        "earliest_date": "17 Oct, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "U-1 (Regular)",
+        "createdon": "2025-08-02 09:58:11",
+        "no_of_dates": 23,
+        "no_of_apnts": 126,
+        "earliest_date": "06 Oct, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "U-1 (Regular)",
+        "createdon": "2025-08-02 09:58:27",
+        "no_of_dates": 54,
+        "no_of_apnts": 369,
+        "earliest_date": "05 Aug, 25"
+      }
+    ],
+    "SB1-Returning Resident (Regular)": [
+      {
+        "visa_location": "MUMBAI IV",
+        "visa_type": "SB1-Returning Resident (Regular)",
+        "createdon": "2025-08-12 11:03:41",
+        "no_of_dates": 6,
+        "no_of_apnts": 2,
+        "earliest_date": "18 Aug, 25"
+      }
+    ],
+    "H-2A (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "H-2A (Regular)",
+        "createdon": "2025-08-14 02:45:59",
+        "no_of_dates": 23,
+        "no_of_apnts": 61,
+        "earliest_date": "21 Aug, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "H-2A (Regular)",
+        "createdon": "2025-08-10 12:15:50",
+        "no_of_dates": 1,
+        "no_of_apnts": 2,
+        "earliest_date": "28 Oct, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "H-2A (Regular)",
+        "createdon": "2025-08-14 02:47:44",
+        "no_of_dates": 13,
+        "no_of_apnts": 271,
+        "earliest_date": "03 Oct, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "H-2A (Regular)",
+        "createdon": "2025-08-14 02:49:34",
+        "no_of_dates": 5,
+        "no_of_apnts": 180,
+        "earliest_date": "01 Oct, 25"
+      }
+    ],
+    "E2 (Regular)": [
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "E2 (Regular)",
+        "createdon": "2025-08-14 17:34:50",
+        "no_of_dates": 13,
+        "no_of_apnts": 93,
+        "earliest_date": "12 Aug, 26"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "E2 (Regular)",
+        "createdon": "2025-08-14 06:30:13",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "12 May, 26"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "E2 (Regular)",
+        "createdon": "2025-08-14 17:34:41",
+        "no_of_dates": 3,
+        "no_of_apnts": 1,
+        "earliest_date": "15 Jul, 26"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "E2 (Regular)",
+        "createdon": "2025-08-14 17:34:37",
+        "no_of_dates": 10,
+        "no_of_apnts": 3,
+        "earliest_date": "07 Aug, 26"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "E2 (Regular)",
+        "createdon": "2025-08-14 17:36:16",
+        "no_of_dates": 7,
+        "no_of_apnts": 212,
+        "earliest_date": "19 Aug, 26"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "E2 (Regular)",
+        "createdon": "2025-08-14 17:36:23",
+        "no_of_dates": 3,
+        "no_of_apnts": 1,
+        "earliest_date": "21 Aug, 26"
+      }
+    ],
+    "U-3 (Regular)": [
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-17 12:07:53",
+        "no_of_dates": 11,
+        "no_of_apnts": 38,
+        "earliest_date": "03 Oct, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-17 12:21:29",
+        "no_of_dates": 23,
+        "no_of_apnts": 2,
+        "earliest_date": "06 Oct, 25"
+      },
+      {
+        "visa_location": "NEW DELHI VAC",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-18 05:49:49",
+        "no_of_dates": 64,
+        "no_of_apnts": 28,
+        "earliest_date": "25 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-17 12:23:13",
+        "no_of_dates": 1,
+        "no_of_apnts": 9,
+        "earliest_date": "05 Nov, 25"
+      },
+      {
+        "visa_location": "MUMBAI",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-12 06:00:39",
+        "no_of_dates": 1,
+        "no_of_apnts": 1,
+        "earliest_date": "03 Sep, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-17 12:06:55",
+        "no_of_dates": 8,
+        "no_of_apnts": 293,
+        "earliest_date": "05 Sep, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-17 12:07:02",
+        "no_of_dates": 1,
+        "no_of_apnts": 0,
+        "earliest_date": "04 Sep, 25"
+      },
+      {
+        "visa_location": "HYDERABAD",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-17 12:23:18",
+        "no_of_dates": 5,
+        "no_of_apnts": 90,
+        "earliest_date": "03 Nov, 25"
+      },
+      {
+        "visa_location": "CHENNAI",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-17 12:23:20",
+        "no_of_dates": 4,
+        "no_of_apnts": 2,
+        "earliest_date": "04 Nov, 25"
+      },
+      {
+        "visa_location": "NEW DELHI",
+        "visa_type": "U-3 (Regular)",
+        "createdon": "2025-08-17 12:23:05",
+        "no_of_dates": 4,
+        "no_of_apnts": 471,
+        "earliest_date": "03 Nov, 25"
+      }
+    ],
+    "Expedited Cases (Regular)": [
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "Expedited Cases (Regular)",
+        "createdon": "2025-08-12 15:29:35",
+        "no_of_dates": 1,
+        "no_of_apnts": 4,
+        "earliest_date": "17 Aug, 25"
+      },
+      {
+        "visa_location": "KOLKATA VAC",
+        "visa_type": "Expedited Cases (Regular)",
+        "createdon": "2025-08-12 15:29:26",
+        "no_of_dates": 1,
+        "no_of_apnts": 3,
+        "earliest_date": "24 Aug, 25"
+      },
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "Expedited Cases (Regular)",
+        "createdon": "2025-08-12 15:29:48",
+        "no_of_dates": 10,
+        "no_of_apnts": 5,
+        "earliest_date": "14 Aug, 25"
+      }
+    ],
+    "J-2 Physicians (Regular)": [
+      {
+        "visa_location": "MUMBAI VAC",
+        "visa_type": "J-2 Physicians (Regular)",
+        "createdon": "2025-08-14 08:35:57",
+        "no_of_dates": 7,
+        "no_of_apnts": 4,
+        "earliest_date": "18 Aug, 25"
+      },
+      {
+        "visa_location": "CHENNAI VAC",
+        "visa_type": "J-2 Physicians (Regular)",
+        "createdon": "2025-08-14 08:35:36",
+        "no_of_dates": 6,
+        "no_of_apnts": 3,
+        "earliest_date": "18 Aug, 25"
+      },
+      {
+        "visa_location": "HYDERABAD VAC",
+        "visa_type": "J-2 Physicians (Regular)",
+        "createdon": "2025-08-14 08:35:29",
+        "no_of_dates": 5,
+        "no_of_apnts": 3,
+        "earliest_date": "18 Aug, 25"
+      }
+    ]
+  },
+  "createdon": 1755511524409
+}

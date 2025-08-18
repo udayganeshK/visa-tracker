@@ -1,0 +1,35 @@
+[
+  {
+    "alert_threshold": 60,
+    "created_at": "2025-08-14T18:21:11.586615",
+    "email": "uday.gnsh@gmail.com",
+    "locations": [],
+    "updated_at": "2025-08-14T18:40:00",
+    "visa_types": [
+      "B2 (Dropbox)",
+      "B1/B2 (Dropbox)"
+    ]
+  },
+  {
+    "alert_threshold": 60,
+    "created_at": "2025-08-14T18:40:13.599418",
+    "email": "srkanteti@gmail.com",
+    "locations": [],
+    "updated_at": "2025-08-14T18:40:13.599496",
+    "visa_types": [
+      "B2 (Dropbox)",
+      "B1/B2 (Dropbox)"
+    ]
+  },
+  {
+    "alert_threshold": 30,
+    "created_at": "2025-08-14T16:39:58.777153+05:30",
+    "email": "divya.kanteti@gmail.com",
+    "locations": [],
+    "updated_at": "2025-08-14T16:39:58.777183+05:30",
+    "visa_types": [
+      "B2 (Dropbox)",
+      "B1/B2 (Dropbox)"
+    ]
+  }
+]

@@ -4,22 +4,11 @@ __pycache__/
 *$py.class
 *.so
 .Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-MANIFEST
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
 
 # Virtual environments
 .venv/
@@ -33,30 +22,41 @@ env/
 .env
 .env.local
 .env.production
-setup-email.sh
+*.key
+*.pem
 
-# Application data files (contains sensitive user data)
-subscriptions.json
-subscriptions_backup.json
-email_log.json
-stats.json
-last_check.json
+# Node.js (if any)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# Large data files that change frequently
-live_visa_data.json
-visa_availability_*.xlsx
-visa_tables_*.txt
-visa_exports_*/
-
-# Temporary files
+# Logs
 *.log
-*.tmp
-*.temp
+logs/
 
 # System files
 .DS_Store
 .DS_Store?
 ._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Database
+*.db
+*.sqlite
+
+# Temporary files
+*.tmp
+*.temp
 .Spotlight-V100
 .Trashes
 ehthumbs.db

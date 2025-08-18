@@ -1,0 +1,9 @@
+Location,Subtype,Earliest_Date,Number_of_Dates,Number_of_Appointments,Last_Updated,Relative_Time
+CHENNAI,Regular,"27 Oct, 25",4,10,2025-08-13 13:43:18,22h ago
+CHENNAI VAC,Dropbox,"06 Aug, 25",40,3,2025-08-04 07:46:52,10d ago
+HYDERABAD,Regular,"22 Aug, 25",4,8,2025-08-04 07:58:55,10d ago
+KOLKATA,Regular,"28 Aug, 25",5,1,2025-08-04 07:58:53,10d ago
+KOLKATA VAC,Regular,"17 Aug, 25",34,10,2025-08-13 13:40:05,22h ago
+MUMBAI,Regular,"27 Oct, 25",4,9,2025-08-13 13:40:42,22h ago
+MUMBAI VAC,Regular,"26 Aug, 25",38,10,2025-08-13 13:40:12,22h ago
+NEW DELHI,Regular,"25 Aug, 25",4,2,2025-08-04 07:58:47,10d ago

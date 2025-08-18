@@ -1,0 +1,12 @@
+Location,Number_of_Visa_Types,Visa_Types,Total_Dates_Available,Total_Appointments
+CHENNAI,22,"B1, B1/B2, B2, C-1, C1/D, F-1, F-2, H-1B, H-2A, H-4, J-1, J-1 Physicians, J-2, L-1, L-2, M-1, O-1, P-3, R-1, R-2, TD, U-1",129,1667
+CHENNAI VAC,28,"B1, B1/B2, B2, C-1, C1/D, CR1, E2, Expedited Cases, F-1, F-2, F31, F41., H-1B, H-4, IR1, IR5, IR5., J-1, J-1 Physicians, J-2, L-1, L-2, M-1, O-1, R-1, TD, U-1, U-3",319,795
+HYDERABAD,18,"B1, B1/B2, B2, F-1, F-2, H-1B, H-2A, H-4, J-1, J-1 Physicians, J-2, L-1, L-2, M-1, O-1, P-3, R-1, R-2",55,467
+HYDERABAD VAC,22,"B1, B1/B2, B2, C-1, E2, F-1, F-2, F41, H-1B, IR1, IR5, IR5., J-1, J-1 Physicians, J-2, K1, M-1, R-1, R-2, TD, U-1, U-3",186,469
+KOLKATA,10,"B1, B1/B2, B2, H-1B, H-4, O-1, P-3, R-1, R-2, U-3",38,105
+KOLKATA VAC,16,"B1, B1/B2, B2, E2, Expedited Cases, F-1, F41., H-1B, H-4, L-1, L-2, O-1, P-3, R-1, TD, U-3",189,110
+MUMBAI,18,"B1, B1/B2, B2, C1/D, F-1, F-2, H-1B, I, J-1, J-1 Physicians, J-2, M-1, O-1, P-3, R-1, R-2, TD, U-3",35,259
+MUMBAI VAC,36,"B1, B1/B2, B2, C-1, C1/D, CR1, Expedited Cases, F-1, F-2, F21, F31, F41, F41., H-1B, H-2A, H-4, I, I5, I52, I53, IR1, IR2, IR5, IR5., J-1, J-1 Physicians, K1, L-1, L-2, M-1, O-1, P-3, R-1, R-2, TD, U-3",626,633
+NEW DELHI,17,"B1, B1/B2, B2, C1/D, F-1, F-2, H-1B, H-4, I, J-1, J-1 Physicians, J-2, M-1, O-1, P-3, R-1, R-2",59,89
+NEW DELHI VAC,28,"B1, B1/B2, B2, C-1, C1/D, E2, F-1, F-2, F31, F41., H-1B, H-2A, H-4, I, IR1, IR5, IR5., J-1, J-1 Physicians, J-2, L-1, L-2, M-1, R-1, R-2, TD, U-1, U-3",771,2709
+MUMBAI IV,7,"F31, F41., IR2, IR5, IR5., K1, SB1-Returning Resident",32,25
